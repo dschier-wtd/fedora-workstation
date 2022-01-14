@@ -1,0 +1,38 @@
+---
+# tasks/main.yml for user
+
+## Configuration Management
+
+- name: "Manage user Account"
+  ansible.builtin.user:
+    name: "{{ item.name | mandatory }}"
+    password: "{{ item.pass | mandatory }}"
+    groups: "{{ item.groups | default(omit) }}"
+    home: "{{ item.home | default(omit) }}"
+    comment: "{{ item.gecos.full_name | default('') }},
+              {{ item.gecos.work_room | default('') }},
+              {{ item.gecos.work_phone | default('') }},
+              {{ item.gecos.home_phone | default('') }},
+              {{ item.gecos.work_mail | default('') }}"
+    system: "{{ item.system | default(omit) }}"
+    state: "{{ item.state | default('present') }}"
+  become: true
+  loop: "{{ user_users }}"
+  tags:
+    - "user"
+    - "configuration"
+
+- name: "Manage user AuthorizedKeys"
+  ansible.posix.authorized_key:
+    user: "{{ item.name }}"
+    state: "present"
+    key: "{{ item.key }}"
+    exclusive: true
+  become: true
+  when:
+    - "item.key is defined"
+  loop: "{{ user_users }}"
+  tags:
+    - "user"
+    - "configuration"
+...

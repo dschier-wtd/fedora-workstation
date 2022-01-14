@@ -1,0 +1,33 @@
+---
+# reference: https://cirrus-ci.org/guide/writing-tasks/
+
+container:
+  cpu: 1
+  memory: "2G"
+
+# Sanity checks
+lint_markdown_task:
+  name: "Lint Markdown"
+  container:
+    image: "docker.io/library/node:latest"
+  install_script: "npm install -g markdownlint-cli"
+  lint_script: "markdownlint *.md docs/*.md"
+
+lint_yaml_task:
+  name: "Lint YAML"
+  container:
+    image: "docker.io/library/alpine:latest"
+  install_script: "apk update && apk add yamllint"
+  lint_script: "yamllint ."
+
+lint_ansible_task:
+  name: "Lint Ansible"
+  container:
+    image: "docker.io/library/alpine:latest"
+  install_script: "apk add ansible ansible-lint"
+  lint_script: "ansible-lint ansible/"
+  check_script: "ansible-playbook
+                -i ansible/hosts.yml
+                --syntax-check
+                ansible/workstation.yml"
+...

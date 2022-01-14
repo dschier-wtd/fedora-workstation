@@ -1,0 +1,15 @@
+---
+# tasks/main.yml for misc
+
+- name: "Import hostname Tasks"
+  ansible.builtin.import_tasks: "hostname.yml"
+
+- name: "Import timezone Tasks"
+  ansible.builtin.import_tasks: "timezone.yml"
+
+- name: "Import cpu Tasks"
+  ansible.builtin.import_tasks: "cpu.yml"
+
+- name: "Import tools Tasks"
+  ansible.builtin.import_tasks: "tools.yml"
+...

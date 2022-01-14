@@ -1,0 +1,34 @@
+---
+# tasks/main.yml for bash
+
+## Package Management
+
+- name: "Manage bash Packages"
+  ansible.builtin.package:
+    name: "{{ bash_package_names }}"
+    state: "{{ bash_package_state }}"
+  become: true
+  tags:
+    - "bash"
+    - "package"
+
+- name: "Manage bash scripting Packages"
+  ansible.builtin.package:
+    name: "{{ bash_script_package_names }}"
+    state: "{{ bash_script_package_state }}"
+  become: true
+  tags:
+    - "bash"
+    - "package"
+    - "development"
+
+- name: "Manage bash powerline Packages"
+  ansible.builtin.package:
+    name: "{{ bash_powerline_package_names }}"
+    state: "{{ bash_powerline_package_state }}"
+  become: true
+  tags:
+    - "bash"
+    - "powerline"
+    - "package"
+...

@@ -1,0 +1,21 @@
+---
+# tasks/keybindings.yml for gnome_shell
+
+- name: "Desktop Shortcut"
+  community.general.dconf:
+    key: "/org/gnome/desktop/wm/keybindings/show-desktop"
+    value: "['<Super>D']"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+
+- name: "Switch Windows"
+  community.general.dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-windows"
+    value: "['<Alt>Tab']"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+...

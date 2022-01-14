@@ -1,0 +1,21 @@
+---
+# tasks/privacy.yml for gnome_shell
+
+- name: "Remove old Temp Files"
+  community.general.dconf:
+    key: "/org/gnome/desktop/privacy/remove-old-temp-files"
+    value: "true"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+
+- name: "Remove old Trash Files"
+  community.general.dconf:
+    key: "/org/gnome/desktop/privacy/remove-old-trash-files"
+    value: "true"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+...

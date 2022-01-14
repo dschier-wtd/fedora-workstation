@@ -1,0 +1,25 @@
+---
+# tasks/power.yml for gnome_shell
+
+- name: "Show Battery Percentage"
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/show-battery-percentage"
+    value: "true"
+    state: "present"
+  tags:
+    - "gnome"
+    - "dconf"
+    - "desktop"
+    - "configuration"
+
+- name: "Power - Button Action"
+  community.general.dconf:
+    key: "/org/gnome/settings-daemon/plugins/power/power-button-action"
+    value: "'suspend'"
+    state: "present"
+  tags:
+    - "gnome"
+    - "dconf"
+    - "desktop"
+    - "configuration"
+...

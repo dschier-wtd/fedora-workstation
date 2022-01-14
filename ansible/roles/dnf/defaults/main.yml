@@ -1,0 +1,9 @@
+---
+# defaults/main.yml for dnf
+
+## Package Management
+
+dnf_package_names:
+  - "dnf"
+dnf_package_state: "present"
+...

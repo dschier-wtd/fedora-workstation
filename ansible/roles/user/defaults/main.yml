@@ -1,0 +1,22 @@
+---
+# defaults/main.yml for user
+
+## Configuration Management
+
+user_users: []
+
+# Example with default values
+# - name: "" # mandatory
+#   pass: "" # mandatory
+#   home: ""
+#   gecos:
+#     full_name: ""
+#     work_room: ""
+#     work_phone: ""
+#     home_phone: ""
+#     work_mail: ""
+#   key: ""
+#   groups: ""
+#   system: false
+#   state: "present"
+...

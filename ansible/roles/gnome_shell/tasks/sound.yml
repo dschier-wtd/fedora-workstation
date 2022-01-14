@@ -1,0 +1,12 @@
+---
+# tasks/sound.yml for gnome_shell
+
+- name: "Sound - Volume above 100%"
+  community.general.dconf:
+    key: "/org/gnome/desktop/sound/allow-volume-above-100-percent"
+    value: "true"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+...

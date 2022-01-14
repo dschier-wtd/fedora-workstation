@@ -1,0 +1,12 @@
+---
+# tasks/dependencies.yml for gnome_shell
+
+- name: "Manage dependency Packages"
+  ansible.builtin.package:
+    name: "python-psutil"
+    state: "present"
+  become: true
+  tags:
+    - "gnome"
+    - "package"
+...

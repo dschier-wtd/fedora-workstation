@@ -1,0 +1,9 @@
+---
+# defaults/main.yml for update
+
+## Package Management
+
+update_package_enabled: true
+update_package_names: "*"
+update_package_state: "latest"
+...

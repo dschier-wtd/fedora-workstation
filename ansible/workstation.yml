@@ -1,0 +1,65 @@
+---
+# ansible playbook for github.com/dschier-wtd/fedora-workstation
+
+- hosts: "localhost"
+  connection: "local"
+
+  vars:
+
+    misc_hostname: "greentea.local"
+    misc_timezone: "Europe/Berlin"
+
+  tasks:
+
+    - name: "Import ansible Role"
+      ansible.builtin.import_role:
+        name: "ansible"
+
+    - name: "Import bash Role"
+      ansible.builtin.import_role:
+        name: "bash"
+
+    - name: "Import dnf Role"
+      ansible.builtin.import_role:
+        name: "dnf"
+
+    - name: "Import fedora Role"
+      ansible.builtin.import_role:
+        name: "fedora"
+
+    - name: "Import firewalld Role"
+      ansible.builtin.import_role:
+        name: "firewalld"
+
+    - name: "Import flathub Role"
+      ansible.builtin.import_role:
+        name: "flathub"
+
+    - name: "Import gnome_shell Role"
+      ansible.builtin.import_role:
+        name: "gnome_shell"
+
+    - name: "Import gnome_applications Role"
+      ansible.builtin.import_role:
+        name: "gnome_applications"
+
+    - name: "Import misc Role"
+      ansible.builtin.import_role:
+        name: "misc"
+
+    - name: "Import podman Role"
+      ansible.builtin.import_role:
+        name: "podman"
+
+    - name: "Import selinux Role"
+      ansible.builtin.import_role:
+        name: "selinux"
+
+    - name: "Import user Role"
+      ansible.builtin.import_role:
+        name: "user"
+
+    - name: "Import vscode Role"
+      ansible.builtin.import_role:
+        name: "vscode"
+...

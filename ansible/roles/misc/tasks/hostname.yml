@@ -1,0 +1,11 @@
+---
+# tasks/hostname.yml for misc
+
+- name: "Manage hostname"
+  ansible.builtin.hostname:
+    name: "{{ misc_hostname }}"
+  become: true
+  tags:
+    - "misc"
+    - "hostname"
+...

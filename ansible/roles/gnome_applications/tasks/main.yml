@@ -1,0 +1,63 @@
+---
+# tasks/main.yml for gnome_applications
+
+- name: "Remove unwanted application Packages"
+  ansible.builtin.package:
+    name: "{{ gnome_app_unwanted_package_names }}"
+    state: "{{ gnome_app_unwanted_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "removal"
+    - "package"
+
+- name: "Manage gnome cloud Packages"
+  ansible.builtin.package:
+    name: "{{ gnome_app_cloud_package_names }}"
+    state: "{{ gnome_app_cloud_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "cloud"
+    - "package"
+
+- name: "Manage gnome development Packages"
+  ansible.builtin.package:
+    name: "{{ gnome_app_development_package_names }}"
+    state: "{{ gnome_app_development_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "development"
+    - "package"
+
+- name: "Manage gnome media Packages"
+  ansible.builtin.package:
+    name: "{{ gnome_app_media_package_names }}"
+    state: "{{ gnome_app_media_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "media"
+    - "package"
+
+- name: "Manage gnome production Packages"
+  ansible.builtin.package:
+    name: "{{ gnome_app_productivity_package_names }}"
+    state: "{{ gnome_app_productivity_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "production"
+    - "package"
+
+- name: "Manage gnome utility Packages"
+  ansible.builtin.package:
+    name: "{{ gnome_utility_package_names }}"
+    state: "{{ gnome_utility_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "utility"
+    - "package"
+...

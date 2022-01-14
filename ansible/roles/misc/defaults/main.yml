@@ -1,0 +1,22 @@
+---
+# defaults/main.yml for misc
+
+## Package Management
+
+misc_editor_package_names:
+  - "micro"
+  - "vim"
+  - "nano"
+misc_editor_package_state: "present"
+
+misc_utility_package_names:
+  - "curl"
+  - "wget"
+  - "nmap"
+misc_utility_package_state: "present"
+
+## Configuration Management
+
+misc_hostname: "{{ inventory_hostname }}"
+misc_timezone: "Etc/UTC"
+...

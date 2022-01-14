@@ -1,0 +1,86 @@
+---
+# defaults/main.yml for gnome_applications
+
+## Package Management
+
+gnome_app_unwanted_package_names:
+  - "gnome-abrt"
+  - "gnome-music"
+  - "gnome-photos"
+  - "libreoffice-core"
+  - "libreoffice-data"
+  - "libreoffice-opensymbol-fonts"
+  - "libreoffice-ure-common"
+  - "rhythmbox"
+gnome_app_unwanted_package_state: "absent"
+
+gnome_app_cloud_package_names:
+  - "fragments"
+  - "geary"
+  - "polari"
+gnome_app_cloud_package_state: "present"
+
+gnome_app_development_package_names:
+  - "gitg"
+  - "gnome-boxes"
+  - "gnome-builder"
+  - "gnome-connections"
+gnome_app_development_package_state: "present"
+
+gnome_app_gaming_package_names:
+  - "aisleriot"
+  - "gnome-2048"
+  - "gnome-chess"
+  - "gnome-games"
+  - "gnome-klotski"
+  - "gnome-mahjongg"
+  - "gnome-mines"
+  - "gnome-nibbles"
+  - "gnome-robots"
+  - "gnome-sudoku"
+  - "gnome-taquin"
+  - "gnome-tetravex"
+  - "quadrapassel"
+gnome_app_gaming_package_state: "absent"
+
+gnome_app_media_package_names:
+  - "cheese"
+  - "eog"
+  - "evince"
+  - "evince-nautilus"
+  - "gimp"
+  - "gnome-books"
+  - "gnome-sound-recorder"
+  - "lollypop"
+  - "shotwell"
+  - "totem"
+gnome_app_media_package_state: "present"
+
+gnome_app_productivity_package_names:
+  - "bijiben"
+  - "gedit"
+  - "gnome-calendar"
+  - "gnome-todo"
+  - "marker"
+gnome_app_productivity_package_state: "present"
+
+gnome_app_utility_package_names:
+  - "deja-dup"
+  - "gnome-characters"
+  - "gnome-calculator"
+  - "gnome-clocks"
+  - "gnome-contacts"
+  - "gnome-disk-utility"
+  - "gnome-extensions-app"
+  - "gnome-feeds"
+  - "gnome-firmware"
+  - "gnome-logs"
+  - "gnome-maps"
+  - "gnome-passwordsafe"
+  - "gnome-screenshot"
+  - "gnome-terminal"
+  - "gnome-terminal-nautilus"
+  - "gnome-weather"
+  - "simple-scan"
+gnome_app_tility_package_state: "present"
+...

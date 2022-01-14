@@ -1,0 +1,9 @@
+---
+# requirements.yml for workstation
+
+collections:
+  - "ansible.posix"
+  - "community.general"
+
+roles: []
+...

@@ -1,0 +1,21 @@
+---
+# tasks/panel.yml for gnome_shell
+
+- name: "Calendar - Show Weekdate"
+  community.general.dconf:
+    key: "/org/gnome/desktop/calendar/show-weekdate"
+    value: "true"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+
+- name: "Clock - Show Date"
+  community.general.dconf:
+    key: "/org/gnome/desktop/interface/clock-show-date"
+    value: "true"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+...

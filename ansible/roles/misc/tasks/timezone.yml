@@ -1,0 +1,11 @@
+---
+# tasks/timezone.yml for misc
+
+- name: "Manage hostname"
+  community.general.timezone:
+    name: "{{ misc_timezone }}"
+  become: true
+  tags:
+    - "misc"
+    - "timezone"
+...

@@ -1,0 +1,19 @@
+---
+# defaults/main.yml for bash
+
+## Package Management
+
+bash_package_names:
+  - "bash"
+  - "bash-completion"
+bash_package_state: "present"
+
+bash_script_package_names:
+  - "ShellCheck"
+  - "bats"
+bash_script_package_state: "present"
+
+bash_powerline_package_names:
+  - "powerline-go"
+bash_powerline_package_state: "present"
+...

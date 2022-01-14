@@ -1,0 +1,22 @@
+---
+# tasks/display.yml for gnome_shell
+
+- name: "Nightlight"
+  community.general.dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    value: "{{ gnome_shell_night_light_enabled }}"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+
+- name: "Nightlight Auto Schedule"
+  community.general.dconf:
+    # yamllint disable-line rule:line-length
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-automatic"
+    value: "{{ gnome_shell_night_light_schedule }}"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+...

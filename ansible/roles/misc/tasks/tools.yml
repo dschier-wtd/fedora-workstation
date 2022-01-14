@@ -1,0 +1,21 @@
+---
+# tasks/tools.yml for misc
+
+- name: "Manage editor package"
+  ansible.builtin.package:
+    name: "{{ misc_editor_package_names }}"
+    state: "present"
+  become: true
+  tags:
+    - "misc"
+    - "package"
+
+- name: "Manage utility package"
+  ansible.builtin.package:
+    name: "{{ misc_utility_package_names }}"
+    state: "present"
+  become: true
+  tags:
+    - "misc"
+    - "package"
+...

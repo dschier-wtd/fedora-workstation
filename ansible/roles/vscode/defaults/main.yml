@@ -1,0 +1,12 @@
+---
+# defaults/main.yml for vscode
+
+## Repository Management
+
+vscode_repository_key: "https://packages.microsoft.com/keys/microsoft.asc"
+
+## Package Management
+
+vscode_package_names: "code"
+vscode_package_state: "present"
+...

@@ -1,0 +1,14 @@
+---
+# tasks/main.yml for fedora
+
+- name: "Manage removal Packages"
+  ansible.builtin.package:
+    name: "{{ fedora_unwanted_package_names }}"
+    state: "{{ fedora_unwanted_package_state }}"
+  become: true
+  when:
+    - "ansible_distribution == 'Fedora'"
+  tags:
+    - "fedora"
+    - "package"
+...

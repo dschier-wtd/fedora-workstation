@@ -1,0 +1,15 @@
+---
+# defaults/main.yml for selinux
+
+## Package Management
+
+selinux_package_names:
+  - "libselinux"
+  - "setroubleshoot-server"
+selinux_package_state: "present"
+
+## Configuration Management
+
+selinux_config_policy: "targeted"
+selinux_config_state: "enforcing"
+...

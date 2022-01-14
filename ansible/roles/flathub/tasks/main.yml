@@ -1,0 +1,16 @@
+---
+# tasks/main.yml for flathub
+
+### Repository Management
+
+- name: "Manage flathub Repository"
+  community.general.flatpak_remote:
+    name: "{{ flathub_repository_name }}"
+    state: "{{ flathub_repository_state }}"
+    flatpakrepo_url: "{{ flathub_repository_url }}"
+    method: "{{ flathub_repository_method }}"
+  become: true
+  tags:
+    - "flathub"
+    - "repository"
+...

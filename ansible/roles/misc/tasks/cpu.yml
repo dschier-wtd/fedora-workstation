@@ -1,0 +1,41 @@
+---
+# tasks/main.yml for misc
+
+- name: "Manage cpupower package"
+  ansible.builtin.package:
+    name: "kernel-tools"
+    state: "present"
+  become: true
+  tags:
+    - "misc"
+    - "package"
+
+- name: "Manage cpupower service"
+  ansible.builtin.service:
+    name: "cpupower.service"
+    state: "started"
+    enabled: true
+  become: true
+  tags:
+    - "misc"
+    - "service"
+
+- name: "Manage thermald package"
+  ansible.builtin.package:
+    name: "thermald"
+    state: "present"
+  become: true
+  tags:
+    - "misc"
+    - "package"
+
+- name: "Manage thermald service"
+  ansible.builtin.service:
+    name: "thermald.service"
+    state: "started"
+    enabled: true
+  become: true
+  tags:
+    - "misc"
+    - "service"
+...

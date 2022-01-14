@@ -1,0 +1,14 @@
+---
+# tasks/main.yml for ansible
+
+## Package Management
+
+- name: "Manage ansible Packages"
+  ansible.builtin.package:
+    name: "{{ ansible_package_names }}"
+    state: "{{ ansible_package_state }}"
+  become: true
+  tags:
+    - "ansible"
+    - "package"
+...

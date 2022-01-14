@@ -1,0 +1,10 @@
+---
+# defaults/main.yml for fedora
+
+## Package Management
+
+fedora_unwanted_package_names:
+  - "abrt"
+  - "anaconda-core"
+fedora_unwanted_package_state: "absent"
+...

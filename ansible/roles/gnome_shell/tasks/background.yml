@@ -1,0 +1,12 @@
+---
+# tasks/background.yml for gnome_shell
+
+- name: "Set Background"
+  community.general.dconf:
+    key: "/org/gnome/desktop/background/picture-uri"
+    value: "'file://{{ gnome_shell_background_path }}'"
+    state: "present"
+  tags:
+    - "gnome"
+    - "configuration"
+...
