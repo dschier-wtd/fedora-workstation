@@ -27,7 +27,6 @@ lint_ansible_task:
   install_script: "apk add ansible ansible-lint"
   lint_script: "ansible-lint ansible/"
   check_script: "ansible-playbook
-                -i ansible/hosts.yml
                 --syntax-check
                 ansible/workstation.yml"
 ...
