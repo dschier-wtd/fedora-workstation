@@ -44,6 +44,7 @@ The below software and configurations are included:
 - [git](./roles/git/)
 - [GNOME Shell](./roles/gnome_shell/)
 - [GNOME applications](./roles/gnome_applications/)
+- [nodejs](.roles/nodejs/)
 - [Podman](./roles/podman/)
 - [SELinux](./roles/selinux/)
 - [thermald](./roles/thermald/)
@@ -55,9 +56,11 @@ with hundreds of packages installed. Furthermore, the packages on flathub are
 often more up-to-date, can be updated without affecting the system and can be
 removed/reset with a single command.
 
+<!--
 Lastly, the playbook is pulling in the configurations from my
 [.dotfiles](https://github.com/dschier-wtd/.dotfiles) repository and configure
 the system accordingly.
+-->
 
 ### Support
 
@@ -85,9 +88,9 @@ same tools, I do.
 ### Requirements
 
 You will need a Fedora Workstation installation with installed Ansible. I don't
-do any partitioning or network configuration in the playbook, so this is up
-to you. Nevertheless, for me it works best, when using a simple Fedora
-Workstation setup with btrfs. One may say... default. :heart:
+do any partitioning or network configuration in the playbook, so this is up to
+you. Nevertheless, for me it works best, when using a simple Fedora Workstation
+setup with btrfs. One may say... default. :heart:
 
 ### Install
 

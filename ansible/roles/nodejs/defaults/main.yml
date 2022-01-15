@@ -1,0 +1,10 @@
+---
+# defaults/main.yml for nodejs
+
+## Package Management
+
+nodejs_package_names:
+  - "nodejs"
+  - "npm"
+nodejs_package_state: "present"
+...

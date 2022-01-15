@@ -47,6 +47,10 @@
       ansible.builtin.import_role:
         name: "misc"
 
+    - name: "Import nodejs Role"
+      ansible.builtin.import_role:
+        name: "nodejs"
+
     - name: "Import podman Role"
       ansible.builtin.import_role:
         name: "podman"
