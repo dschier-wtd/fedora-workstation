@@ -35,20 +35,20 @@ some parameters.
 
 The below software and configurations are included:
 
-- [Ansible](./roles/ansible/)
-- [Bash](./roles/bash/)
-- [cpupowerd](./roles/misc/)
-- [dnf](./roles/dnf/)
-- [firewalld](./roles/firewalld/)
-- [flathub](./roles/flathub/)
-- [git](./roles/git/)
-- [GNOME Shell](./roles/gnome_shell/)
-- [GNOME applications](./roles/gnome_applications/)
-- [nodejs](.roles/nodejs/)
-- [Podman](./roles/podman/)
-- [SELinux](./roles/selinux/)
-- [thermald](./roles/thermald/)
-- [VSCode](./roles/vscode/)
+- [Ansible](./ansible/roles/ansible/)
+- [Bash](./ansible/roles/bash/)
+- [cpupowerd](./ansible/roles/misc/)
+- [dnf](./ansible/roles/dnf/)
+- [firewalld](./ansible/roles/firewalld/)
+- [flathub](./ansible/roles/flathub/)
+- [git](./ansible/roles/git/)
+- [GNOME Shell](./ansible/roles/gnome_shell/)
+- [GNOME applications](./ansible/roles/gnome_applications/)
+- [nodejs](./ansible/roles/nodejs/)
+- [Podman](./ansible/roles/podman/)
+- [SELinux](./ansible/roles/selinux/)
+- [thermald](./ansible/roles/thermald/)
+- [VSCode](./ansible/roles/vscode/)
 
 In addition, there are some configurations and package removals for unwanted
 software. I try to use flatpak packages as much as possible to avoid a system

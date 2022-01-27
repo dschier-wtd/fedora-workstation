@@ -12,7 +12,10 @@ This file is the changelog of [fedora-workstation](https://github.com/dschier-wt
 - Added: pipeline and linting
 - Added: initial roles and plabook
 - Added: meta files
-- Added: noejs
+- Added: nodejs
+- Added: tmux + htop
+- Added: machine-id
+- Fixed: broken links
 
 ## [MAJOR.MINOR.PATCH-LABEL] - YYYYMMDD
 
