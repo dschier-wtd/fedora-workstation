@@ -16,6 +16,7 @@ This file is the changelog of [fedora-workstation](https://github.com/dschier-wt
 - Added: tmux + htop
 - Added: machine-id
 - Fixed: broken links
+- Added: git
 
 ## [MAJOR.MINOR.PATCH-LABEL] - YYYYMMDD
 

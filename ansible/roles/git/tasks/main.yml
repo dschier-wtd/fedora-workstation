@@ -1,0 +1,12 @@
+---
+# tasks/main.yml for git
+
+- name: "Manage git Packages"
+  ansible.builtin.package:
+    name: "{{ git_package_names }}"
+    state: "{{ git_package_state }}"
+  become: true
+  tags:
+    - "git"
+    - "package"
+...

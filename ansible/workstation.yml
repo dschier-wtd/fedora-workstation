@@ -35,6 +35,10 @@
       ansible.builtin.import_role:
         name: "flathub"
 
+    - name: "Import git Role"
+      ansible.builtin.import_role:
+        name: "git"
+
     - name: "Import gnome_shell Role"
       ansible.builtin.import_role:
         name: "gnome_shell"
