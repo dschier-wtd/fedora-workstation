@@ -1,0 +1,12 @@
+---
+# tasks/machine_id.yml for misc
+
+- name: "Manage machine-id"
+  ansible.builtin.command:
+    cmd: "systemd-machine-id-setup"
+  become true
+  changed_when: false
+  tags:
+    - "misc"
+    - "machine_id"
+...

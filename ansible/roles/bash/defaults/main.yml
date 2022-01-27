@@ -16,4 +16,9 @@ bash_script_package_state: "present"
 bash_powerline_package_names:
   - "powerline-go"
 bash_powerline_package_state: "present"
+
+## Configuration Management
+
+bash_powerline_system_enabled: true
+bash_powerline_system_options: ""
 ...
