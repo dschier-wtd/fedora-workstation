@@ -4,7 +4,7 @@
 - name: "Manage machine-id"
   ansible.builtin.command:
     cmd: "systemd-machine-id-setup"
-  become true
+  become: true
   changed_when: false
   tags:
     - "misc"
