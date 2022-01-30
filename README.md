@@ -137,11 +137,64 @@ $ git checkout <tag_name>
 
 #### Roles and Collections
 
-TBD
+Before running the actual playboook, it is needed to install required roles
+and collections. This can be done in two simple commands.
 
-### Documentation
+```shell
+# Install collections
+$ ansible-galaxy collection install -r ansible/requirements.yml
 
-TBD
+# Install roles
+$ ansible-galaxy role install -r ansible/requirements.yml
+```
+
+#### Tuning variables
+
+You can find lots of default variables in the roles and used codes. Most of
+the behaviour can be tuned by adjusting these variables in the playbook.
+
+For example, to adjust the GNOME applications that are installed during the
+playbook run, you can:
+
+1. look up the variables in the
+   [defaults/main.yml](./ansible/roles/gnome_applications/defaults/main.yml)
+   of the role
+2. Pick the variable, you want to change and edit the
+   [playbook workstation.yml](./ansible/workstation.yml) like the below example
+
+```yaml
+---
+# ansible playbook for github.com/dschier-wtd/fedora-workstation
+
+- name: "Configure Fedora Workstation"
+  hosts: "localhost"
+  connection: "local"
+
+  vars:
+
+    misc_hostname: "greentea.local"
+    misc_timezone: "Europe/Berlin"
+    gnome_app_gaming_package_state: "present"
+
+...SNIP...
+```
+
+Since it is planned to move all roles in a proper collection, there is not much
+documentation for the roles, for now.
+
+#### The first run
+
+Now you are ready to execute the playbook. Be aware, that this will run for
+quite some time, remove packages, download packages and configure a couple of
+services.
+
+```shell
+# Execute the playbook
+$ ansible-playbook -K ansible/workstation.yml
+```
+
+It is a good idea to restart your machine afterwards to ensure that everything
+is working and configured as expected.
 
 ## Contribute
 

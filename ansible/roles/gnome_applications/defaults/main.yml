@@ -4,6 +4,7 @@
 ## Package Management
 
 gnome_app_unwanted_package_names:
+  - "baobab"
   - "cheese"
   - "connections"
   - "gedit"
@@ -22,6 +23,8 @@ gnome_app_unwanted_package_names:
   - "gnome-maps"
   - "gnome-music"
   - "gnome-photos"
+  - "gnome-remote-desktop"
+  - "gnome-screenshot"
   - "gnome-weather"
   - "libreoffice-core"
   - "libreoffice-data"

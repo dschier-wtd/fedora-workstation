@@ -1,7 +1,8 @@
 ---
 # ansible playbook for github.com/dschier-wtd/fedora-workstation
 
-- hosts: "localhost"
+- name: "Configure Fedora Workstation"
+  hosts: "localhost"
   connection: "local"
 
   vars:

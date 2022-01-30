@@ -6,11 +6,14 @@
 # Are we interactive?
 [ "${PS1}" != "" ] || return 0
 
-# apply .dotfiles configuration
-for file in ~/.dotfiles/system/*; do
-    # shellcheck source=/dev/null
-    source "${file}"
-done
+# dotfiles
+# Reference: https://github.com/dschier-wtd/.dotfiles
+if [ -e "${HOME}"/.dotfiles/system/ ]; then
+    for file in "${HOME}"/.dotfiles/system/*; do
+        # shellcheck source=/dev/null
+        source "${file}"
+    done
+fi
 
 # Powerline-Go
 # Reference: https://github.com/justjanne/powerline-go
