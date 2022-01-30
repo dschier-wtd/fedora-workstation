@@ -10,7 +10,7 @@
   become: true
   changed_when: false
   when:
-    "fedora_modular_repository_state == false"
+    - "fedora_modular_repository_disabled"
   tags:
     - "fedora"
     - "repository"
@@ -22,7 +22,7 @@
   become: true
   changed_when: false
   when:
-    "fedora_modular_update_repository_state == false"
+    - "fedora_modular_update_repository_disabled"
   tags:
     - "fedora"
     - "repository"
