@@ -8,5 +8,7 @@
     state: "present"
   tags:
     - "gnome"
+    - "shell"
+    - "background"
     - "configuration"
 ...

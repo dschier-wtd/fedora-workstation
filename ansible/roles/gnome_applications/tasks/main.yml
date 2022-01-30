@@ -46,14 +46,14 @@
     - "package"
     - "flatpak"
 
-- name: "Manage gnome grahics Packages"
+- name: "Manage gnome grahic Packages"
   community.general.flatpak:
-    name: "{{ gnome_app_graphics_package_names }}"
-    state: "{{ gnome_app_graphics_package_state }}"
+    name: "{{ gnome_app_graphic_package_names }}"
+    state: "{{ gnome_app_graphic_package_state }}"
   become: true
   tags:
     - "gnome"
-    - "graphics"
+    - "graphic"
     - "package"
     - "flatpak"
 
@@ -114,8 +114,8 @@
 
 - name: "Manage gnome utility Packages"
   community.general.flatpak:
-    name: "{{ gnome_utility_package_names }}"
-    state: "{{ gnome_utility_package_state }}"
+    name: "{{ gnome_app_utility_package_names }}"
+    state: "{{ gnome_app_utility_package_state }}"
   become: true
   tags:
     - "gnome"

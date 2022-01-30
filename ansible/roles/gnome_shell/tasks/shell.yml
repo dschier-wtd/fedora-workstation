@@ -8,5 +8,7 @@
   become: true
   tags:
     - "gnome"
+    - "shell"
+    - "unwanted"
     - "package"
 ...

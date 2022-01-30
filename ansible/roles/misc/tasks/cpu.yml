@@ -3,15 +3,6 @@
 
 ## Package Management
 
-- name: "Manage cpupower package"
-  ansible.builtin.package:
-    name: "kernel-tools"
-    state: "present"
-  become: true
-  tags:
-    - "misc"
-    - "package"
-
 - name: "Manage thermald package"
   ansible.builtin.package:
     name: "thermald"
@@ -19,19 +10,10 @@
   become: true
   tags:
     - "misc"
+    - "cpu"
     - "package"
 
 ## Service Management
-
-- name: "Manage cpupower service"
-  ansible.builtin.service:
-    name: "cpupower.service"
-    state: "started"
-    enabled: true
-  become: true
-  tags:
-    - "misc"
-    - "service"
 
 - name: "Manage thermald service"
   ansible.builtin.service:
@@ -41,5 +23,6 @@
   become: true
   tags:
     - "misc"
+    - "cpu"
     - "service"
 ...

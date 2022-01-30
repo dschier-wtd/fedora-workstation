@@ -8,6 +8,8 @@
     state: "present"
   tags:
     - "gnome"
+    - "shell"
+    - "panel"
     - "configuration"
 
 - name: "Clock - Show Date"
@@ -17,5 +19,7 @@
     state: "present"
   tags:
     - "gnome"
+    - "shell"
+    - "panel"
     - "configuration"
 ...

@@ -37,7 +37,6 @@ The below software and configurations are included:
 
 - [Ansible](./ansible/roles/ansible/)
 - [Bash](./ansible/roles/bash/)
-- [cpupower](./ansible/roles/misc/)
 - [dnf](./ansible/roles/dnf/)
 - [firewalld](./ansible/roles/firewalld/)
 - [flathub](./ansible/roles/flathub/)
@@ -93,6 +92,50 @@ you. Nevertheless, for me it works best, when using a simple Fedora Workstation
 setup with btrfs. One may say... default. :heart:
 
 ### Install
+
+This section describes how to install and get the playbook going.
+
+#### Ansible
+
+Before starting to use the playbook, you need to ensure that Ansible is
+installed in a recent version. To do, you can use PyPi (`pip`) ad described
+below.
+
+```shell
+# Create a new python virtual environment (venv)
+$ python3 -m venv ~/.venv-ansible
+
+# Jump into the new environment
+$ source ~/.venv-ansible/bin/activate
+
+# Install Ansible
+$ pip install ansible psutil selinux
+```
+
+#### Playbook
+
+Afterwards, you can download the desired release from the
+[release page](https://github.com/whiletruedoio/container-template/tags) and
+store it in a location, that suits you.
+
+```shell
+# Download a tag/release
+$ https://github.com/dschier-wtd/fedora-workstation/archive/refs/tags/<tag_name>.zip
+
+```
+
+If you want to use git instead, help to develop or change to a tag/branch on
+the fly, you can clone the repository instead.
+
+```shell
+# Clone the repository with a given tag
+$ git clone https://github.com/dschier-wtd/fedora-workstation.git
+
+# Checkout the desired tag
+$ git checkout <tag_name>
+```
+
+#### Roles and Collections
 
 TBD
 

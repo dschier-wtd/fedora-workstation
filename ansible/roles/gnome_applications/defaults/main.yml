@@ -4,7 +4,11 @@
 ## Package Management
 
 gnome_app_unwanted_package_names:
+  - "cheese"
+  - "connections"
   - "gedit"
+  - "eog"
+  - "evince"
   - "gnome-abrt"
   - "gnome-boxes"
   - "gnome-calculator"
@@ -25,6 +29,7 @@ gnome_app_unwanted_package_names:
   - "libreoffice-ure-common"
   - "mediawriter"
   - "rhythmbox"
+  - "simple-scan"
   - "totem"
 gnome_app_unwanted_package_state: "absent"
 

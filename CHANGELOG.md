@@ -19,6 +19,9 @@ This file is the changelog of [fedora-workstation](https://github.com/dschier-wt
 - Added: git
 - Updated: Bash
 - Changed: migrated to flatpaks
+- Fix: broken tasks
+- Removed: cpupower, since it may conflict or not work in VMs
+- Added: tags
 
 ## [MAJOR.MINOR.PATCH-LABEL] - YYYYMMDD
 

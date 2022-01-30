@@ -8,8 +8,8 @@
     state: "present"
   tags:
     - "gnome"
-    - "dconf"
-    - "desktop"
+    - "shell"
+    - "power"
     - "configuration"
 
 - name: "Power - Button Action"
@@ -19,7 +19,7 @@
     state: "present"
   tags:
     - "gnome"
-    - "dconf"
-    - "desktop"
+    - "shell"
+    - "power"
     - "configuration"
 ...

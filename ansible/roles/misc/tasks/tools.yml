@@ -10,6 +10,7 @@
   become: true
   tags:
     - "misc"
+    - "editor"
     - "package"
 
 - name: "Manage utility package"
@@ -19,5 +20,6 @@
   become: true
   tags:
     - "misc"
+    - "utility"
     - "package"
 ...

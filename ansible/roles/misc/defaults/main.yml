@@ -14,7 +14,6 @@ misc_utility_package_names:
   - "wget"
   - "nmap"
   - "tmux"
-  - "htop"
 misc_utility_package_state: "present"
 
 ## Configuration Management

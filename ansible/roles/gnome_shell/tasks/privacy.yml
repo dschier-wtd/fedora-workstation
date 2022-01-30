@@ -8,6 +8,8 @@
     state: "present"
   tags:
     - "gnome"
+    - "shell"
+    - "privacy"
     - "configuration"
 
 - name: "Remove old Trash Files"
@@ -17,5 +19,7 @@
     state: "present"
   tags:
     - "gnome"
+    - "shell"
+    - "privacy"
     - "configuration"
 ...

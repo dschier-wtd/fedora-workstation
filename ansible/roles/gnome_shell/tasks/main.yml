@@ -4,7 +4,7 @@
 ## Dependency Management
 
 - name: "Import dependencies Tasks"
-  ansible.builtin.import_tasks: "dependencies.yml"
+  ansible.builtin.import_tasks: "dependency.yml"
 
 ## Package Management
 
