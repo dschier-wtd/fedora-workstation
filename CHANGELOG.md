@@ -22,6 +22,8 @@ This file is the changelog of [fedora-workstation](https://github.com/dschier-wt
 - Fix: broken tasks
 - Removed: cpupower, since it may conflict or not work in VMs
 - Added: tags
+- Fix: bad id for vscopde repo
+- Fix: release fix session
 
 ## [MAJOR.MINOR.PATCH-LABEL] - YYYYMMDD
 

@@ -20,7 +20,7 @@
   ansible.builtin.import_tasks: "display.yml"
 
 - name: "Import Keybinding Tasks"
-  ansible.builtin.import_tasks: "keybindings.yml"
+  ansible.builtin.import_tasks: "keyboard.yml"
 
 - name: "Import mouse Tasks"
   ansible.builtin.import_tasks: "mouse.yml"
@@ -38,5 +38,5 @@
   ansible.builtin.import_tasks: "sound.yml"
 
 - name: "Import windows Tasks"
-  ansible.builtin.import_tasks: "windows.yml"
+  ansible.builtin.import_tasks: "window.yml"
 ...
