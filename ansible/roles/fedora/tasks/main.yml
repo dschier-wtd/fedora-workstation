@@ -4,19 +4,25 @@
 ## Repository Management
 
 - name: "Manage modular Repository"
-  ansible.builtin.yum_repository:
-    name: "{{ fedora_modular_repository_name }}"
-    enabled: "{{ fedora_modular_repository_enabled }}"
+  ansible.builtin.command:
+    cmd: "dnf config-manager
+          --set-disabled {{ fedora_modular_repository_name }}"
   become: true
+  changed_when: false
+  when:
+    "fedora_modular_repository_state == false"
   tags:
     - "fedora"
     - "repository"
 
 - name: "Manage modular_update Repository"
-  ansible.builtin.yum_repository:
-    name: "{{ fedora_modular_update_repository_name }}"
-    enabled: "{{ fedora_modular_update_repository_enabled }}"
+  ansible.builtin.command:
+    cmd: "dnf config-manager 
+          --set-disabled {{ fedora_modular_update_repository_name }}"
   become: true
+  changed_when: false
+  when:
+    "fedora_modular_update_repository_state == false"
   tags:
     - "fedora"
     - "repository"
