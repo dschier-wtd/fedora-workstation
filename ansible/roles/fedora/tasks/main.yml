@@ -1,6 +1,37 @@
 ---
 # tasks/main.yml for fedora
 
+## Repository Management
+
+- name: "Manage modular Repository"
+  ansible.builtin.yum_repository:
+    name: "{{ fedora_modular_repository_name }}"
+    enabled: "{{ fedora_modular_repository_enabled }}"
+  become: true
+  tags:
+    - "fedora"
+    - "repository"
+
+- name: "Manage modular_update Repository"
+  ansible.builtin.yum_repository:
+    name: "{{ fedora_modular_update_repository_name }}"
+    enabled: "{{ fedora_modular_update_repository_enabled }}"
+  become: true
+  tags:
+    - "fedora"
+    - "repository"
+
+- name: "Manage fedora flatpak Repository"
+  community.general.flatpak_remote:
+    name: "{{ fedora_flatpak_repository_name }}"
+    state: "{{ fedora_flatpak_repository_state }}"
+  become: true
+  tags:
+    - "fedora"
+    - "repository"
+
+## Package Management
+
 - name: "Manage removal Packages"
   ansible.builtin.package:
     name: "{{ fedora_unwanted_package_names }}"
@@ -11,4 +42,13 @@
   tags:
     - "fedora"
     - "package"
+
+- name: "Remove leaf Packages"
+  ansible.builtin.dnf:
+    autoremove: "{{ fedora_autoremove_package_leafs }}"
+  become: true
+  tags:
+    - "misc"
+    - "package"
+    - "housekeeping"
 ...

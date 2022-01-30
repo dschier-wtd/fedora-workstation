@@ -1,10 +1,23 @@
 ---
 # defaults/main.yml for fedora
 
+## Repository Management
+
+fedora_modular_repository_name: "fedora-modular"
+fedora_modular_repository_enabled: "no"
+fedora_modular_update_repository_name: "updates-modular"
+fedora_modular_update_repository_enabled: "no"
+
+fedora_flatpak_repository_name: "fedora"
+fedora_flatpak_repository_state: "absent"
+
 ## Package Management
 
 fedora_unwanted_package_names:
   - "abrt"
   - "anaconda-core"
+  - "anaconda-install-env-deps"
 fedora_unwanted_package_state: "absent"
+
+fedora_autoremove_package_leafs: true
 ...

@@ -16,6 +16,7 @@ gnome_app_unwanted_package_names:
   - "gnome-calendar"
   - "gnome-characters"
   - "gnome-clocks"
+  - "gnome-color-manager"
   - "gnome-contacts"
   - "gnome-disk-utlity"
   - "gnome-font-viewer"

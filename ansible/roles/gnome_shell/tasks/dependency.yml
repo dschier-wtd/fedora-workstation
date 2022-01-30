@@ -3,8 +3,8 @@
 
 - name: "Manage dependency Packages"
   ansible.builtin.package:
-    name: "python-psutil"
-    state: "present"
+    name: "{{ gnome_shell_dependency_package_names }}"
+    state: "{{ gnome_shell_dependency_package_state }}"
   become: true
   tags:
     - "gnome"

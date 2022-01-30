@@ -1,6 +1,13 @@
 ---
 # defaults/main.yml for gnome_shell
 
+## Dependency Management
+
+gnome_shell_dependency_package_names:
+  - "psutil"
+  - "fedora-workstation-backgrounds"
+gnome_shell_dependency_package_state: "present"
+
 ## Package Management
 
 gnome_shell_unwanted_package_names:
