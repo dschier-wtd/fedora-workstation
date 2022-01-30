@@ -4,7 +4,7 @@
 ## Dependency Management
 
 gnome_shell_dependency_package_names:
-  - "psutil"
+  - "psutils"
   - "fedora-workstation-backgrounds"
 gnome_shell_dependency_package_state: "present"
 
