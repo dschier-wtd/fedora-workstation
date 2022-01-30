@@ -1,7 +1,19 @@
 ---
 # tasks/main.yml for flathub
 
-### Repository Management
+## Dependency Management
+
+- name: "Manage flathub Dependencies"
+  ansible.builtin.package:
+    name: "{{ flathub_dependency_package_names }}"
+    state: "{{ flathub_dependency_package_state }}"
+  become: true
+  tags:
+    - "flathub"
+    - "dependency"
+    - "package"
+
+## Repository Management
 
 - name: "Manage flathub Repository"
   community.general.flatpak_remote:

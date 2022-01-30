@@ -1,6 +1,11 @@
 ---
 # defaults/main.yml for flathub
 
+## Dependency Management
+
+flathub_dependency_package_names: "flatpak"
+flathub_dependency_package_state: "present"
+
 ## Repository Management
 
 flathub_repository_name: "flathub"

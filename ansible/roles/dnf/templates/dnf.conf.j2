@@ -1,10 +1,10 @@
 {{ ansible_managed | comment }}
 
 [main]
-gpgcheck=1
-installonly_limit=3
-clean_requirements_on_remove=True
-best=False
-skip_if_unavailable=True
-fastestmirror=True
-max_parallel_downloads=10
+gpgcheck={{ dnf_configuration_gpgcheck }}
+installonly_limit={{ dnf_configuration_installonly_limit }}
+clean_requirements_on_remove={{ dnf_configuration_clean_requirements_on_remove }}
+best={{ dnf_configuration_best }}
+skip_if_unavailable={{ dnf_configuration_skip_if_unavailable }}
+fastestmirror={{ dnf_configuration_fastestmirror }}
+max_parallel_downloads={{ dnf_configuration_max_parallel_downloads }}

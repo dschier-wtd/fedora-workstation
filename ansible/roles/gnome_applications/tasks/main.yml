@@ -1,6 +1,8 @@
 ---
 # tasks/main.yml for gnome_applications
 
+## Package Management
+
 - name: "Remove unwanted application Packages"
   ansible.builtin.package:
     name: "{{ gnome_app_unwanted_package_names }}"
@@ -12,7 +14,7 @@
     - "package"
 
 - name: "Manage gnome cloud Packages"
-  ansible.builtin.package:
+  community.general.flatpak:
     name: "{{ gnome_app_cloud_package_names }}"
     state: "{{ gnome_app_cloud_package_state }}"
   become: true
@@ -20,9 +22,10 @@
     - "gnome"
     - "cloud"
     - "package"
+    - "flatpak"
 
 - name: "Manage gnome development Packages"
-  ansible.builtin.package:
+  community.general.flatpak:
     name: "{{ gnome_app_development_package_names }}"
     state: "{{ gnome_app_development_package_state }}"
   become: true
@@ -30,9 +33,32 @@
     - "gnome"
     - "development"
     - "package"
+    - "flatpak"
+
+- name: "Manage gnome gaming Packages"
+  community.general.flatpak:
+    name: "{{ gnome_app_gaming_package_names }}"
+    state: "{{ gnome_app_gaming_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "gaming"
+    - "package"
+    - "flatpak"
+
+- name: "Manage gnome grahics Packages"
+  community.general.flatpak:
+    name: "{{ gnome_app_graphics_package_names }}"
+    state: "{{ gnome_app_graphics_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "graphics"
+    - "package"
+    - "flatpak"
 
 - name: "Manage gnome media Packages"
-  ansible.builtin.package:
+  community.general.flatpak:
     name: "{{ gnome_app_media_package_names }}"
     state: "{{ gnome_app_media_package_state }}"
   become: true
@@ -40,9 +66,21 @@
     - "gnome"
     - "media"
     - "package"
+    - "flatpak"
 
-- name: "Manage gnome production Packages"
-  ansible.builtin.package:
+- name: "Manage gnome messaging Packages"
+  community.general.flatpak:
+    name: "{{ gnome_app_messaging_package_names }}"
+    state: "{{ gnome_app_messaging_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "messaging"
+    - "package"
+    - "flatpak"
+
+- name: "Manage gnome productivity Packages"
+  community.general.flatpak:
     name: "{{ gnome_app_productivity_package_names }}"
     state: "{{ gnome_app_productivity_package_state }}"
   become: true
@@ -50,9 +88,32 @@
     - "gnome"
     - "production"
     - "package"
+    - "flatpak"
+
+- name: "Manage gnome secret Packages"
+  community.general.flatpak:
+    name: "{{ gnome_app_secret_package_names }}"
+    state: "{{ gnome_app_secret_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "secret"
+    - "package"
+    - "flatpak"
+
+- name: "Manage gnome system Packages"
+  community.general.flatpak:
+    name: "{{ gnome_app_system_package_names }}"
+    state: "{{ gnome_app_system_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "secret"
+    - "package"
+    - "flatpak"
 
 - name: "Manage gnome utility Packages"
-  ansible.builtin.package:
+  community.general.flatpak:
     name: "{{ gnome_utility_package_names }}"
     state: "{{ gnome_utility_package_state }}"
   become: true
@@ -60,4 +121,5 @@
     - "gnome"
     - "utility"
     - "package"
+    - "flatpak"
 ...

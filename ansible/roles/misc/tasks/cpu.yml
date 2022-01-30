@@ -1,5 +1,7 @@
 ---
-# tasks/main.yml for misc
+# tasks/cpu.yml for misc
+
+## Package Management
 
 - name: "Manage cpupower package"
   ansible.builtin.package:
@@ -10,6 +12,17 @@
     - "misc"
     - "package"
 
+- name: "Manage thermald package"
+  ansible.builtin.package:
+    name: "thermald"
+    state: "present"
+  become: true
+  tags:
+    - "misc"
+    - "package"
+
+## Service Management
+
 - name: "Manage cpupower service"
   ansible.builtin.service:
     name: "cpupower.service"
@@ -19,15 +32,6 @@
   tags:
     - "misc"
     - "service"
-
-- name: "Manage thermald package"
-  ansible.builtin.package:
-    name: "thermald"
-    state: "present"
-  become: true
-  tags:
-    - "misc"
-    - "package"
 
 - name: "Manage thermald service"
   ansible.builtin.service:

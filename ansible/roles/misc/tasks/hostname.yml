@@ -1,6 +1,8 @@
 ---
 # tasks/hostname.yml for misc
 
+## Configuration Management
+
 - name: "Manage hostname"
   ansible.builtin.hostname:
     name: "{{ misc_hostname }}"

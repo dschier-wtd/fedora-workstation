@@ -1,17 +1,17 @@
 ---
 # tasks/main.yml for misc
 
-- name: "Import machine_id Tasks"
-  ansible.builtin.import_tasks: "machine_id.yml"
+- name: "Import cpu Tasks"
+  ansible.builtin.import_tasks: "cpu.yml"
 
 - name: "Import hostname Tasks"
   ansible.builtin.import_tasks: "hostname.yml"
 
+- name: "Import machine_id Tasks"
+  ansible.builtin.import_tasks: "machine_id.yml"
+
 - name: "Import timezone Tasks"
   ansible.builtin.import_tasks: "timezone.yml"
-
-- name: "Import cpu Tasks"
-  ansible.builtin.import_tasks: "cpu.yml"
 
 - name: "Import tools Tasks"
   ansible.builtin.import_tasks: "tools.yml"

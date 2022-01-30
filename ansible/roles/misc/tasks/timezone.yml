@@ -1,6 +1,8 @@
 ---
 # tasks/timezone.yml for misc
 
+## Configuration Management
+
 - name: "Manage hostname"
   community.general.timezone:
     name: "{{ misc_timezone }}"

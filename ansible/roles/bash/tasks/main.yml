@@ -31,4 +31,19 @@
     - "bash"
     - "powerline"
     - "package"
+
+- name: "Manage bash powerline Configuration"
+  ansible.builtin.template:
+    src: "wtd_bash.sh.j2"
+    dest: "/etc/profile.d/wtd_bash.sh"
+    owner: "root"
+    group: "root"
+    mode: 0644
+  become: true
+  when:
+    - "bash_powerline_system_enabled | bool"
+  tags:
+    - "bash"
+    - "powerline"
+    - "package"
 ...

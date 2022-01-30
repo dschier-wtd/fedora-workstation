@@ -1,6 +1,8 @@
 ---
 # tasks/machine_id.yml for misc
 
+## Configuration Management
+
 - name: "Manage machine-id"
   ansible.builtin.command:
     cmd: "systemd-machine-id-setup"

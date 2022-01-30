@@ -6,4 +6,14 @@
 dnf_package_names:
   - "dnf"
 dnf_package_state: "present"
+
+## Configuration Management
+
+dnf_configuration_gpgcheck: "True"
+dnf_configuration_installonly_limit: "3"
+dnf_configuration_clean_requirements_on_remove: "True"
+dnf_configuration_best: "False"
+dnf_configuration_skip_if_unavailable: "True"
+dnf_configuration_fastestmirror: "True"
+dnf_configuration_max_parallel_downloads: "10"
 ...

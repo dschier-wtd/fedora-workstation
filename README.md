@@ -37,7 +37,7 @@ The below software and configurations are included:
 
 - [Ansible](./ansible/roles/ansible/)
 - [Bash](./ansible/roles/bash/)
-- [cpupowerd](./ansible/roles/misc/)
+- [cpupower](./ansible/roles/misc/)
 - [dnf](./ansible/roles/dnf/)
 - [firewalld](./ansible/roles/firewalld/)
 - [flathub](./ansible/roles/flathub/)
@@ -47,7 +47,7 @@ The below software and configurations are included:
 - [nodejs](./ansible/roles/nodejs/)
 - [Podman](./ansible/roles/podman/)
 - [SELinux](./ansible/roles/selinux/)
-- [thermald](./ansible/roles/thermald/)
+- [thermald](./ansible/roles/misc/)
 - [VSCode](./ansible/roles/vscode/)
 
 In addition, there are some configurations and package removals for unwanted

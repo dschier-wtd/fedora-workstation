@@ -12,8 +12,8 @@ for file in ~/.dotfiles/system/*; do
     source "${file}"
 done
 
-# Powerline-Go References
-# https://github.com/justjanne/powerline-go
+# Powerline-Go
+# Reference: https://github.com/justjanne/powerline-go
 
 if [ -f "${GOPATH}"/bin/powerline-go ]; then
     function _update_ps1() {

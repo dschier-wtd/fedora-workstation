@@ -1,6 +1,8 @@
 ---
 # tasks/tools.yml for misc
 
+## Package Management
+
 - name: "Manage editor package"
   ansible.builtin.package:
     name: "{{ misc_editor_package_names }}"

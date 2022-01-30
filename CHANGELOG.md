@@ -17,6 +17,8 @@ This file is the changelog of [fedora-workstation](https://github.com/dschier-wt
 - Added: machine-id
 - Fixed: broken links
 - Added: git
+- Updated: Bash
+- Changed: migrated to flatpaks
 
 ## [MAJOR.MINOR.PATCH-LABEL] - YYYYMMDD
 

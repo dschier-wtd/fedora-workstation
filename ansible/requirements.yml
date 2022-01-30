@@ -1,5 +1,5 @@
 ---
-# requirements.yml for workstation
+# requirements.yml for github.com/dschier-wtd/fedora-workstation
 
 collections:
   - "ansible.posix"
