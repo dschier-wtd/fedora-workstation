@@ -1,0 +1,128 @@
+---
+# tasks/main.yml for kubernetes_client
+
+## Dependency Management
+
+- name: "Manage dependency Packages"
+  ansible.builtin.package:
+    name: "{{ kubernetes_dependency_package_names }}"
+    state: "present"
+  become: true
+  tags:
+    - "kubernetes"
+    - "dependency"
+    - "package"
+
+## Binary Management
+
+- name: "Manage helm Binary"
+  ansible.builtin.unarchive:
+    src: "{{ kubernetes_helm_url }}"
+    remote_src: true
+    dest: "/usr/local/bin/"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "kubernetes"
+    - "helm"
+    - "binary"
+
+- name: "Manage k9s Binary"
+  ansible.builtin.unarchive:
+    src: "{{ kubernetes_k9s_url }}"
+    remote_src: true
+    dest: "/usr/local/bin/"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "kubernetes"
+    - "k9s"
+    - "binary"
+
+- name: "Manage kubectl Binary"
+  ansible.builtin.get_url:
+    url: "{{ kubernetes_kubectl_url }}"
+    dest: "/usr/local/bin/kubectl"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "kubernetes"
+    - "kubectl"
+    - "binary"
+
+- name: "Manage kubectx Binary"
+  ansible.builtin.unarchive:
+    src: "{{ kubernetes_kubectx_url }}"
+    remote_src: true
+    dest: "/usr/local/bin/"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "kubernetes"
+    - "kubectx"
+    - "binary"
+
+- name: "Manage kubens Binary"
+  ansible.builtin.unarchive:
+    src: "{{ kubernetes_kubens_url }}"
+    remote_src: true
+    dest: "/usr/local/bin/"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "kubernetes"
+    - "kubens"
+    - "binary"
+
+- name: "Manage minikube Binary"
+  ansible.builtin.unarchive:
+    src: "{{ kubernetes_minikube_url }}"
+    remote_src: true
+    dest: "/usr/local/bin/"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "kubernetes"
+    - "minikube"
+    - "binary"
+
+## Configuration Management
+
+- name: "Manage kubectl-bash-ompletion Configuration"
+  ansible.builtin.command:
+    cmd: "kubectl completion bash > /etc/bash_completion.d/kubectl"
+  become: true
+  when:
+    - ""
+  tags:
+    - "kubernetes"
+    - "kubectl"
+    - "bash"
+    - "configuration"
+
+- name: "Manage minikube-podman-sudo Configuration"
+  ansible.builtin.template:
+    src: "sudoers_podman.conf.j2"
+    dest: "/etc/sudoers.d/podman"
+    owner: "root"
+    group: "root"
+    mode: 0644
+  become: true
+  tags:
+    - "kubernetes"
+    - "sudo"
+    - "podman"
+    - "configuration"
+...

@@ -1,0 +1,43 @@
+---
+# defaults/main.yml for kubernetes_client
+
+## Dependency Management
+
+kubernetes_dependency_package_names:
+  - "tar"
+  - "unzip"
+kubernetes_dependency_package_state: "present"
+
+## Binary Management
+
+kubernetes_binary_location: "/usr/local/bin"
+
+kubernetes_helm_version: "v3.8.0"
+kubernetes_helm_url: "https://github.com/helm/helm/releases/download/v3.8.0/helm-v3.8.0-linux-amd64.tar.gz.asc"
+kubernetes_helm_state: "present"
+
+kubernetes_k9s_version: "v0.25.18"
+kubernetes_k9s_url: "https://github.com/derailed/k9s/releases/download/v0.25.18/k9s_Linux_arm64.tar.gz"
+kubernetes_k9s_state: "present"
+
+kubernetes_kubectl_version: "v1.23.3"
+kubernetes_kubectl_url: "https://dl.k8s.io/release/v1.23.3/bin/linux/amd64/kubectl"
+kubernetes_kubectl_state: "present"
+
+kubernetes_kubectx_version: "v0.9.4"
+kubernetes_kubectx_url: "https://github.com/ahmetb/kubectx/releases/download/v0.9.4/kubectx_v0.9.4_linux_x86_64.tar.gz"
+kubernetes_kubectx_state: "present"
+
+kubernetes_kubens_version: "v0.9.4"
+kubernetes_kubens_url: "https://github.com/ahmetb/kubectx/releases/download/v0.9.4/kubens_v0.9.4_linux_x86_64.tar.gz"
+kubernetes_kubens_state: "present"
+
+kubernetes_minikube_version: "v1.25.1"
+kubernetes_minikube_url: "https://github.com/kubernetes/minikube/releases/download/v1.25.1/minikube-linux-amd64.tar.gz"
+kubernetes_minikube_state: "present"
+
+## Configuration Management
+
+kubernetes_minikube_podman_sudo_enabled: "auto"
+kubernetes_minikube_podman_sudo_group: "wheel"
+...

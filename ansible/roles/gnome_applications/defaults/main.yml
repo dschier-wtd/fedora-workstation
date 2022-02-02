@@ -83,6 +83,7 @@ gnome_app_gaming_package_state: "absent"
 
 gnome_app_graphic_package_names:
   - "com.github.huluti.Curtail"
+  - "com.github.maoschanz.drawing"
   - "org.darktable.Darktable"
   - "org.gimp.GIMP"
   - "org.gnome.eog"
@@ -138,6 +139,8 @@ gnome_app_system_package_names:
 gnome_app_system_package_state: "present"
 
 gnome_app_utility_package_names:
+  - "com.rafaelmardojai.Blanket"
+  - "dev.Cogitri.Health"
   - "org.gnome.Books"
   - "org.gnome.Characters"
   - "org.gnome.clocks"
