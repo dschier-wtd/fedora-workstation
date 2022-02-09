@@ -9,6 +9,12 @@ misc_editor_package_names:
   - "nano"
 misc_editor_package_state: "present"
 
+misc_other_package_names:
+  - "cowsay"
+  - "fortune-mod"
+  - "screenfetch"
+misc_other_package_state: "present"
+
 misc_utility_package_names:
   - "curl"
   - "wget"

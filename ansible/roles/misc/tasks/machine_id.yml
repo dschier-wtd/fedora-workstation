@@ -3,7 +3,7 @@
 
 ## Configuration Management
 
-- name: "Manage machine-id"
+- name: "Manage machine-id Configuration"
   ansible.builtin.command:
     cmd: "systemd-machine-id-setup"
   become: true

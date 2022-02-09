@@ -3,7 +3,7 @@
 
 ## Configuration Management
 
-- name: "Manage hostname"
+- name: "Manage hostname Configuration"
   ansible.builtin.hostname:
     name: "{{ misc_hostname }}"
   become: true

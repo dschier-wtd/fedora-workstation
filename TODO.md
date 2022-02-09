@@ -9,6 +9,7 @@
 - [ ] add podman-tui
 - [ ] add distrobox
 - [ ] add cirrus-cli
+- [ ] add goss
 - [ ] add checksums for binary downloads
 - [ ] add system update playbook
 - [ ] add way to sort and order application icons
@@ -24,8 +25,8 @@
 - [ ] add tmux on login shell
 - [ ] add vimrc
 - [ ] add vim-airline
-- [ ] add fortune
-- [ ] add cowsay
+- [x] add fortune
+- [x] add cowsay
 - [ ] github client / cli
 - [ ] vscode extensions
 
