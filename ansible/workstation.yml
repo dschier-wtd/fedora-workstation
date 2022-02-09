@@ -48,6 +48,10 @@
       ansible.builtin.import_role:
         name: "gnome_shell"
 
+    - name: "Import kubernetes_client Role"
+      ansible.builtin.import_role:
+        name: "kubernetes_client"
+
     - name: "Import misc Role"
       ansible.builtin.import_role:
         name: "misc"
