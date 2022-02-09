@@ -6,6 +6,5 @@
 ansible_package_names:
   - "ansible-core"
   - "ansible-lint"
-  - "ansible-test"
 ansible_package_state: "present"
 ...
