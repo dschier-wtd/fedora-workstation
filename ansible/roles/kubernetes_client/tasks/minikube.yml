@@ -1,0 +1,43 @@
+---
+# tasks/minikube.yml for kubernetes_client
+
+- name: "Manage minikube Binary"
+  ansible.builtin.get_url:
+    url: "{{ kubernetes_minikube_url }}"
+    dest: "{{ kubernetes_binary_location }}/minikube"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "kubernetes"
+    - "minikube"
+    - "binary"
+
+- name: "Manage minikube-bash-completion Configuration"
+  ansible.builtin.shell:
+    cmd: "minikube completion bash > /etc/bash_completion.d/minikube"
+  become: true
+  tags:
+    - "kubernetes"
+    - "minikube"
+    - "bash"
+    - "configuration"
+
+- name: "Manage minikube-podman-sudo Configuration"
+  ansible.builtin.template:
+    src: "sudoers_podman.conf.j2"
+    dest: "/etc/sudoers.d/minikube"
+    owner: "root"
+    group: "root"
+    mode: 0644
+  become: true
+  when:
+    - "kubernetes_minikube_podman_sudo_enabled | bool"
+  tags:
+    - "kubernetes"
+    - "minikube"
+    - "sudo"
+    - "podman"
+    - "configuration"
+...

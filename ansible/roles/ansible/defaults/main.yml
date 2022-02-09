@@ -4,8 +4,7 @@
 ## Package Management
 
 ansible_package_names:
-  - "ansible"
+  - "ansible-core"
   - "ansible-lint"
-  - "ansible-test"
 ansible_package_state: "present"
 ...

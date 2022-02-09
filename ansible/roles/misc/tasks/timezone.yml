@@ -3,7 +3,7 @@
 
 ## Configuration Management
 
-- name: "Manage hostname"
+- name: "Manage timezone Configuration"
   community.general.timezone:
     name: "{{ misc_timezone }}"
   become: true

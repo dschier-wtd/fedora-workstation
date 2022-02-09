@@ -24,6 +24,9 @@ This file is the changelog of [fedora-workstation](https://github.com/dschier-wt
 - Added: tags
 - Fix: bad id for vscopde repo
 - Fix: release fix session
+- Added: kubernetes client packages
+- Added: other misc packages
+- Changed: Ansible now using ansible-core
 
 ## [MAJOR.MINOR.PATCH-LABEL] - YYYYMMDD
 

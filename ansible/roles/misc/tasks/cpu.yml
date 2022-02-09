@@ -3,7 +3,7 @@
 
 ## Package Management
 
-- name: "Manage thermald package"
+- name: "Manage thermald Packages"
   ansible.builtin.package:
     name: "thermald"
     state: "present"
@@ -15,7 +15,7 @@
 
 ## Service Management
 
-- name: "Manage thermald service"
+- name: "Manage thermald Service"
   ansible.builtin.service:
     name: "thermald.service"
     state: "started"

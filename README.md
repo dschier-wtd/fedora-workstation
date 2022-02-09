@@ -25,6 +25,12 @@ The playbook will install and configure various software. Most of the automation
 can be configured very easily and should be self-explanatory. Nevertheless,
 the following section will provide a feature overview.
 
+### Work in progress
+
+The playbook is under heavy development and there is certainly stuff missing or
+incomplete. Be warned, you may run into unexpected issues. I am trying to
+maintain a simple ToDo list.
+
 ### Features
 
 The Ansible playbook is meant to be used via
@@ -43,6 +49,7 @@ The below software and configurations are included:
 - [git](./ansible/roles/git/)
 - [GNOME Shell](./ansible/roles/gnome_shell/)
 - [GNOME applications](./ansible/roles/gnome_applications/)
+- [Kubernetes Clients](./ansible/roles/kubernetes_client/)
 - [nodejs](./ansible/roles/nodejs/)
 - [Podman](./ansible/roles/podman/)
 - [SELinux](./ansible/roles/selinux/)

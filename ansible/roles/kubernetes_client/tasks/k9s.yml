@@ -1,0 +1,20 @@
+---
+# tasks/k9s.yml for kubernetes_client
+
+- name: "Manage k9s Binary"
+  ansible.builtin.unarchive:
+    src: "{{ kubernetes_k9s_url }}"
+    remote_src: true
+    dest: "{{ kubernetes_binary_location }}/"
+    owner: "root"
+    group: "root"
+    mode: 0755
+    exclude:
+      - "README.md"
+      - "LICENSE"
+  become: true
+  tags:
+    - "kubernetes"
+    - "k9s"
+    - "binary"
+...

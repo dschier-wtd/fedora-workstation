@@ -3,7 +3,7 @@
 
 ## Package Management
 
-- name: "Manage editor package"
+- name: "Manage editor Packages"
   ansible.builtin.package:
     name: "{{ misc_editor_package_names }}"
     state: "present"
@@ -13,7 +13,17 @@
     - "editor"
     - "package"
 
-- name: "Manage utility package"
+- name: "Manage other Packages"
+  ansible.builtin.package:
+    name: "{{ misc_other_package_names }}"
+    state: "present"
+  become: true
+  tags:
+    - "misc"
+    - "other"
+    - "package"
+
+- name: "Manage utility Packages"
   ansible.builtin.package:
     name: "{{ misc_utility_package_names }}"
     state: "present"
