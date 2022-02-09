@@ -1,0 +1,19 @@
+---
+# tasks/kubens.yml for kubernetes_client
+
+- name: "Manage kubens Binary"
+  ansible.builtin.unarchive:
+    src: "{{ kubernetes_kubens_url }}"
+    remote_src: true
+    dest: "{{ kubernetes_binary_location }}/"
+    owner: "root"
+    group: "root"
+    mode: 0755
+    exclude:
+      - "LICENSE"
+  become: true
+  tags:
+    - "kubernetes"
+    - "kubens"
+    - "binary"
+...

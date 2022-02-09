@@ -25,6 +25,12 @@ The playbook will install and configure various software. Most of the automation
 can be configured very easily and should be self-explanatory. Nevertheless,
 the following section will provide a feature overview.
 
+### Work in progress
+
+The playbook is under heavy development and there is certainly stuff missing or
+incomplete. Be warned, you may run into unexpected issues. I am trying to
+maintain a simple ToDo list.
+
 ### Features
 
 The Ansible playbook is meant to be used via

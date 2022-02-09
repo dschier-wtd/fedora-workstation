@@ -29,3 +29,9 @@ if [ -f "${GOPATH}"/bin/powerline-go ]; then
         PROMPT_COMMAND="_update_ps1; ${PROMPT_COMMAND}"
     fi
 fi
+
+## tmux
+
+# if [ -f /usr/bin/tmux ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#  tmux a -t default || exec tmux new -s default && exit;
+# fi

@@ -1,0 +1,17 @@
+---
+- name: "Manage kubectx Binary"
+  ansible.builtin.unarchive:
+    src: "{{ kubernetes_kubectx_url }}"
+    remote_src: true
+    dest: "{{ kubernetes_binary_location }}/"
+    owner: "root"
+    group: "root"
+    mode: 0755
+    exclude:
+      - "LICENSE"
+  become: true
+  tags:
+    - "kubernetes"
+    - "kubectx"
+    - "binary"
+...

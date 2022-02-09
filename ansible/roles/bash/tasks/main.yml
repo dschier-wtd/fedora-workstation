@@ -32,7 +32,7 @@
     - "powerline"
     - "package"
 
-- name: "Manage bash powerline Configuration"
+- name: "Manage bash Configuration"
   ansible.builtin.template:
     src: "wtd_bash.sh.j2"
     dest: "/etc/profile.d/wtd_bash.sh"

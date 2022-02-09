@@ -1,0 +1,28 @@
+---
+# tasks/kubectl.yml for kubernetes_client
+
+- name: "Manage kubectl Binary"
+  ansible.builtin.get_url:
+    url: "{{ kubernetes_kubectl_url }}"
+    dest: "{{ kubernetes_binary_location }}/kubectl"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "kubernetes"
+    - "kubectl"
+    - "binary"
+
+- name: "Manage kubectl-bash-completion Configuration"
+  ansible.builtin.command:
+    cmd: "kubectl completion bash > /etc/bash_completion.d/kubectl"
+  become: true
+  when:
+    - ""
+  tags:
+    - "kubernetes"
+    - "kubectl"
+    - "bash"
+    - "configuration"
+...
