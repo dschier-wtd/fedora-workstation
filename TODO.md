@@ -45,6 +45,11 @@
 
 - [ ] move roles to a proper collection (whiletruedoio.general + desktop)
 
+## Issues
+
+- [ ] fix bash completion generation always done
+- [ ] fix thermald started in VMs
+
 ## Testing
 
 - [ ] Integration tests for the roles
