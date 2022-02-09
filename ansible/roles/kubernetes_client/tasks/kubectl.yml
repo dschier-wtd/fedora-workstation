@@ -15,11 +15,9 @@
     - "binary"
 
 - name: "Manage kubectl-bash-completion Configuration"
-  ansible.builtin.command:
+  ansible.builtin.shell:
     cmd: "kubectl completion bash > /etc/bash_completion.d/kubectl"
   become: true
-  when:
-    - ""
   tags:
     - "kubernetes"
     - "kubectl"

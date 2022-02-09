@@ -15,11 +15,9 @@
     - "binary"
 
 - name: "Manage minikube-bash-completion Configuration"
-  ansible.builtin.command:
+  ansible.builtin.shell:
     cmd: "minikube completion bash > /etc/bash_completion.d/minikube"
   become: true
-  when:
-    - ""
   tags:
     - "kubernetes"
     - "kubectl"
