@@ -43,6 +43,6 @@ kubernetes_minikube_version: "latest"
 kubernetes_minikube_state: "present"
 kubernetes_minikube_url: "https://storage.googleapis.com/minikube/releases/{{ kubernetes_minikube_version }}/minikube-linux-amd64"
 kubernetes_minikube_bash_completion_create: true
-kubernetes_minikube_podman_sudo_enabled: "auto"
+kubernetes_minikube_podman_sudo_enabled: true
 kubernetes_minikube_podman_sudo_group: "wheel"
 ...

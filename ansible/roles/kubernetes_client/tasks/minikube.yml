@@ -20,20 +20,23 @@
   become: true
   tags:
     - "kubernetes"
-    - "kubectl"
+    - "minikube"
     - "bash"
     - "configuration"
 
 - name: "Manage minikube-podman-sudo Configuration"
   ansible.builtin.template:
     src: "sudoers_podman.conf.j2"
-    dest: "/etc/sudoers.d/podman"
+    dest: "/etc/sudoers.d/minikube"
     owner: "root"
     group: "root"
     mode: 0644
   become: true
+  when:
+    - "kubernetes_minikube_podman_sudo_enabled | bool"
   tags:
     - "kubernetes"
+    - "minikube"
     - "sudo"
     - "podman"
     - "configuration"
