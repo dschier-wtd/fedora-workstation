@@ -5,8 +5,8 @@
 
 - name: "Manage dependency Packages"
   ansible.builtin.package:
-    name: "{{ github_client_dependency_package_names }}"
-    state: "present"
+    name: "{{ github_cli_dependency_package_names }}"
+    state: "{{ github_cli_dependency_package_state }}"
   become: true
   tags:
     - "github"

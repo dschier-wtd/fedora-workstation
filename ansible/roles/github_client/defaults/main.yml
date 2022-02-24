@@ -3,14 +3,14 @@
 
 ## Dependency Management
 
-github_client_dependency_package_names:
+github_cli_dependency_package_names:
   - "tar"
   - "unzip"
-github_client_dependency_package_state: "present"
+github_cli_dependency_package_state: "present"
 
 ## GitHub Desktop
 
-github_desktop_package_name: "io.github.shiftey.Desktop"
+github_desktop_package_names: "io.github.shiftey.Desktop"
 github_desktop_package_state: "present"
 
 ## GitHub CLI
