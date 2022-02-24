@@ -33,7 +33,7 @@
   ansible.builtin.unarchive:
     src: "{{ github_cli_url }}"
     remote_src: true
-    dest: "{{ github_cli_binary_location }}/gh"
+    dest: "{{ github_cli_binary_location }}"
     owner: "root"
     group: "root"
     mode: 0755
