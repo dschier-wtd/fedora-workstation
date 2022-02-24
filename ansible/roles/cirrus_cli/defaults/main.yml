@@ -1,0 +1,14 @@
+---
+# roles/cirrus_cli/defaults/main.yml
+
+## Global
+
+cirrus_cli_binary_location: "/usr/local/bin"
+
+## Cirrus-CLI
+
+cirrus_cli_version: "v0.71.1"
+cirrus_cli_state: "present"
+# yamllint disable-line rule:line-length
+cirrus_cli_url: "https://github.com/cirruslabs/cirrus-cli/releases/download/{{ cirrus_version }}/cirrus-linux-amd64"
+...

@@ -1,0 +1,22 @@
+---
+# roles/github_client/defaults/main.yml
+
+## Dependency Management
+
+github_client_dependency_package_names:
+  - "tar"
+  - "unzip"
+github_client_dependency_package_state: "present"
+
+## GitHub Desktop
+
+github_desktop_package_name: "io.github.shiftey.Desktop"
+github_desktop_package_state: "present"
+
+## GitHub CLI
+
+github_cli_binary_location: "/usr/local/bin/"
+github_cli_version: "2.5.1"
+# yamllint disable-line rule:line-length
+github_cli_url: "https://github.com/cli/cli/releases/download/v{{ github_cli_version }}/gh_{{ github_cli_version }}_linux_amd64.tar.gz"
+...

@@ -18,6 +18,7 @@
   ansible.builtin.shell:
     cmd: "kubectl completion bash > /etc/bash_completion.d/kubectl"
   become: true
+  changed_when: false
   tags:
     - "kubernetes"
     - "kubectl"

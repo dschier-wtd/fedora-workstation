@@ -8,8 +8,7 @@
 
 - [ ] add podman-tui
 - [ ] add distrobox
-- [ ] add cirrus-cli
-- [ ] add goss
+- [x] add cirrus-cli
 - [ ] add checksums for binary downloads
 - [ ] add system update playbook
 - [ ] add way to sort and order application icons
@@ -26,9 +25,9 @@
 - [ ] add vimrc
 - [ ] add vim-airline
 - [x] add fortune
-- [x] add cowsay
-- [ ] github client / cli
-- [ ] vscode extensions
+- [x] add github client / cli
+- [ ] add vscode extensions installation
+- [ ] add thermald role
 
 ### Customization
 
@@ -47,8 +46,7 @@
 
 ## Issues
 
-- [ ] fix bash completion generation always done
-- [ ] fix thermald started in VMs
+- [ ] kubernetes_client: fix bash completion generation always done
 
 ## Testing
 

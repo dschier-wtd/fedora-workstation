@@ -1,0 +1,34 @@
+---
+# tasks/kubectl.yml for kubernetes_client
+
+## Dependency Management
+
+- name: "Manage binary Path"
+  ansible.builtin.file:
+    name: "{{ cirrus_cli_binary_location }}"
+    state: "directory"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "github"
+    - "dependency"
+    - "binary"
+    - "package"
+
+## Binary Management
+
+- name: "Manage cirrus-cli Binary"
+  ansible.builtin.get_url:
+    url: "{{ cirrus_cli_url }}"
+    dest: "{{ cirrus_cli_binary_location }}/cirrus"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "cirrus"
+    - "cirrus_cli"
+    - "binary"
+...

@@ -10,6 +10,7 @@
   become: true
   when:
     - "update_package_enabled | bool"
+  notify: "Reboot System"
   tags:
     - "update"
     - "package"

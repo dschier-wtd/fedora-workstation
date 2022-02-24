@@ -1,0 +1,58 @@
+---
+# roles/github_client/tasks/main.yml
+
+## Dependency Management
+
+- name: "Manage dependency Packages"
+  ansible.builtin.package:
+    name: "{{ github_client_dependency_package_names }}"
+    state: "present"
+  become: true
+  tags:
+    - "github"
+    - "dependency"
+    - "package"
+
+- name: "Manage binary Path"
+  ansible.builtin.file:
+    name: "{{ github_client_binary_location }}"
+    state: "directory"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "github"
+    - "dependency"
+    - "binary"
+    - "package"
+
+## Binary Management
+
+- name: "Manage github-cli Binary"
+  ansible.builtin.get_url:
+    src: "{{ github_cli_url }}"
+    remote_src: true
+    dest: "{{ github_cli_binary_location }}/gh"
+    owner: "root"
+    group: "root"
+    mode: 0755
+  become: true
+  tags:
+    - "github"
+    - "cli"
+    - "binary"
+
+## Package Management
+
+- name: "Manage github-desktop Packages"
+  community.general.flatpak:
+    name: "{{ github_desktop_package_names }}"
+    state: "{{ github_desktop_package_state }}"
+  become: true
+  tags:
+    - "github"
+    - "desktop"
+    - "package"
+    - "flatpak"
+...
