@@ -30,7 +30,7 @@
 ## Binary Management
 
 - name: "Manage github-cli Binary"
-  ansible.builtin.get_url:
+  ansible.builtin.unarchive:
     src: "{{ github_cli_url }}"
     remote_src: true
     dest: "{{ github_cli_binary_location }}/gh"
