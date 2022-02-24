@@ -35,7 +35,9 @@
     remote_src: true
     dest: "{{ github_cli_binary_location }}"
     include:
-      - "bin/gh"
+      - "gh_{{ github_cli_version }}_linux_amd64/bin/gh"
+    extra_opts:
+      - "--strip-components=2"
     owner: "root"
     group: "root"
     mode: 0755

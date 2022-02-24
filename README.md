@@ -43,17 +43,22 @@ The below software and configurations are included:
 
 - [Ansible](./ansible/roles/ansible/)
 - [Bash](./ansible/roles/bash/)
+- [Cirrus CLI](./ansible/roles/cirrus_cli/)
 - [dnf](./ansible/roles/dnf/)
+- [fedora specifics](./ansible/roles/fedora/)
 - [firewalld](./ansible/roles/firewalld/)
 - [flathub](./ansible/roles/flathub/)
 - [git](./ansible/roles/git/)
-- [GNOME Shell](./ansible/roles/gnome_shell/)
+- [GitHub Clients](./ansible/roles/github_client/)
 - [GNOME applications](./ansible/roles/gnome_applications/)
+- [GNOME Shell](./ansible/roles/gnome_shell/)
 - [Kubernetes Clients](./ansible/roles/kubernetes_client/)
+- [Misc Tasks](./ansible/roles/misc/)
 - [nodejs](./ansible/roles/nodejs/)
 - [Podman](./ansible/roles/podman/)
 - [SELinux](./ansible/roles/selinux/)
-- [thermald](./ansible/roles/misc/)
+- [Updates](./ansible/roles/update/)
+- [Users](./ansible/roles/user/)
 - [VSCode](./ansible/roles/vscode/)
 
 In addition, there are some configurations and package removals for unwanted
@@ -105,7 +110,7 @@ This section describes how to install and get the playbook going.
 #### Ansible
 
 Before starting to use the playbook, you need to ensure that Ansible is
-installed in a recent version. To do, you can use PyPi (`pip`) ad described
+installed in a recent version. To do, you can use PyPi (`pip`) as described
 below.
 
 ```shell
@@ -117,6 +122,13 @@ $ source ~/.venv-ansible/bin/activate
 
 # Install Ansible
 $ pip install ansible psutil selinux
+```
+
+Since Fedora 35, you can also install Ansible 2.12.
+
+```shell
+# Install ansible via dnf
+$ sudo dnf install ansible-core -y
 ```
 
 #### Playbook
