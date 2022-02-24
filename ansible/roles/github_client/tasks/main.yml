@@ -15,7 +15,7 @@
 
 - name: "Manage binary Path"
   ansible.builtin.file:
-    name: "{{ github_client_binary_location }}"
+    name: "{{ github_cli_binary_location }}"
     state: "directory"
     owner: "root"
     group: "root"
