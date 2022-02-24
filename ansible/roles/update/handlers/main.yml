@@ -1,0 +1,63 @@
+---
+# roles/update/handlers/main.yml
+
+- name: "Reboot Hint"
+  ansible.builtin.pause:
+    prompt: "A reboot is required, please reboot the system.
+            You can do this by executing `systemctl reboot`.
+            Hit `Enter` to continue."
+  listen:
+    - "Reboot System"
+  when:
+    - "not update_reboot_remote_enabled"
+    - "not update_reboot_local_enabled"
+  tags:
+    - "update"
+    - "package"
+    - "system"
+
+- name: "Reboot Prompt"
+  ansible.builtin.pause:
+    prompt: "A reboot is required for the system. Do you want to reboot?
+            Please enter 'YES', everything else will skip the reboot:"
+  register: "r_reboot"
+  listen:
+    - "Reboot System"
+  when:
+    - "not update_reboot_remote_enabled"
+    - "not update_reboot_local_enabled"
+  tags:
+    - "update"
+    - "package"
+    - "system"
+
+- name: "Reboot Remote System"
+  ansible.builtin.reboot:
+    reboot_timeout: 3600
+  become: true
+  listen:
+    - "Reboot System"
+  when:
+    - "r_reboot == 'YES'"
+    - "update_reboot_remote_enabled"
+    - "ansible_connection != 'local'"
+  tags:
+    - "update"
+    - "package"
+    - "system"
+
+- name: "Reboot Local System"
+  ansible.builtin.command:
+    cmd: "shutdown -r now"
+  become: true
+  listen:
+    - "Reboot System"
+  when:
+    - "r_reboot == 'YES'"
+    - "update_reboot_local_enabled"
+    - "ansible_connection == 'local'"
+  tags:
+    - "update"
+    - "package"
+    - "system"
+...

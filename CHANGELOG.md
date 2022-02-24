@@ -27,6 +27,11 @@ This file is the changelog of [fedora-workstation](https://github.com/dschier-wt
 - Added: kubernetes client packages
 - Added: other misc packages
 - Changed: Ansible now using ansible-core
+- Added: cirrus-cli role
+- Added: update playbook
+- Added: github cli and github desktop
+- Updated: workstation playbook to use cirrus_cli and github_client
+- Added: tests for ansible-playbooks
 
 ## [MAJOR.MINOR.PATCH-LABEL] - YYYYMMDD
 

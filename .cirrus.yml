@@ -6,6 +6,7 @@ container:
   memory: "2G"
 
 # Sanity checks
+
 lint_markdown_task:
   name: "Lint Markdown"
   container:
@@ -17,16 +18,26 @@ lint_yaml_task:
   name: "Lint YAML"
   container:
     image: "docker.io/library/alpine:latest"
-  install_script: "apk update && apk add yamllint"
+  install_script: "apk add --no-cache yamllint"
   lint_script: "yamllint ."
 
 lint_ansible_task:
   name: "Lint Ansible"
   container:
-    image: "docker.io/library/alpine:latest"
-  install_script: "apk add ansible ansible-lint"
+    image: "quay.io/ansible/creator-ee:latest"
   lint_script: "ansible-lint ansible/"
-  check_script: "ansible-playbook
-                --syntax-check
-                ansible/workstation.yml"
+
+test_ansible_task:
+  name: "Check Ansible"
+  container:
+    image: "quay.io/ansible/creator-ee:latest"
+  dependencies_script: "ansible-galaxy
+                        collection install
+                        -r ansible/requirements.yml"
+  workstation_script: "ansible-playbook
+                      --syntax-check
+                      ansible/workstation.yml"
+  update_script: "ansible-playbook
+                  --syntax-check
+                  ansible/workstation.yml"
 ...

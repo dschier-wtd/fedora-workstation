@@ -40,6 +40,10 @@
       ansible.builtin.import_role:
         name: "git"
 
+    - name: "Import github_client Role"
+      ansible.builtin.import_role:
+        name: "github_client"
+
     - name: "Import gnome_applications Role"
       ansible.builtin.import_role:
         name: "gnome_applications"
@@ -47,6 +51,10 @@
     - name: "Import gnome_shell Role"
       ansible.builtin.import_role:
         name: "gnome_shell"
+
+    - name: "Import cirrus_cli Role"
+      ansible.builtin.import_role:
+        name: "cirrus_cli"
 
     - name: "Import kubernetes_client Role"
       ansible.builtin.import_role:

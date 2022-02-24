@@ -17,6 +17,9 @@
   ansible.builtin.file:
     name: "{{ kubernetes_binary_location }}"
     state: "directory"
+    owner: "root"
+    group: "root"
+    mode: 0755
   become: true
   tags:
     - "kubernetes"
