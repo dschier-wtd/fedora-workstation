@@ -1,0 +1,7 @@
+---
+# roles/distrobox/defaults/main.yml
+
+distrobox_package_names:
+  - "distrobox"
+distrobox_package_state: "present"
+...

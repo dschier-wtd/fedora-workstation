@@ -1,5 +1,5 @@
 ---
-# ansible playbook for github.com/dschier-wtd/fedora-workstation
+# ansible/playbooks/configure.yml
 
 - name: "Configure Fedora Workstation"
   hosts: "localhost"
@@ -16,6 +16,10 @@
       ansible.builtin.import_role:
         name: "ansible"
 
+    - name: "Import misc Role"
+      ansible.builtin.import_role:
+        name: "misc"
+
     - name: "Import bash Role"
       ansible.builtin.import_role:
         name: "bash"
@@ -28,9 +32,21 @@
       ansible.builtin.import_role:
         name: "fedora"
 
+    - name: "Import selinux Role"
+      ansible.builtin.import_role:
+        name: "selinux"
+
     - name: "Import firewalld Role"
       ansible.builtin.import_role:
         name: "firewalld"
+
+    - name: "Import thermald Role"
+      ansible.builtin.import_role:
+        name: "thermald"
+
+    - name: "Import user Role"
+      ansible.builtin.import_role:
+        name: "user"
 
     - name: "Import flathub Role"
       ansible.builtin.import_role:
@@ -60,10 +76,6 @@
       ansible.builtin.import_role:
         name: "kubernetes_client"
 
-    - name: "Import misc Role"
-      ansible.builtin.import_role:
-        name: "misc"
-
     - name: "Import nodejs Role"
       ansible.builtin.import_role:
         name: "nodejs"
@@ -72,13 +84,13 @@
       ansible.builtin.import_role:
         name: "podman"
 
-    - name: "Import selinux Role"
+    - name: "Import distrobox Role"
       ansible.builtin.import_role:
-        name: "selinux"
+        name: "distrobox"
 
-    - name: "Import user Role"
+    - name: "Import arm_tools Role"
       ansible.builtin.import_role:
-        name: "user"
+        name: "arm_tools"
 
     - name: "Import vscode Role"
       ansible.builtin.import_role:

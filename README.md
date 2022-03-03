@@ -42,9 +42,11 @@ some parameters.
 The below software and configurations are included:
 
 - [Ansible](./ansible/roles/ansible/)
+- [ARM tools](./ansible/roles/arm_tools/)
 - [Bash](./ansible/roles/bash/)
 - [Cirrus CLI](./ansible/roles/cirrus_cli/)
 - [dnf](./ansible/roles/dnf/)
+- [distrobox](./ansible/roles/distrobox/)
 - [fedora specifics](./ansible/roles/fedora/)
 - [firewalld](./ansible/roles/firewalld/)
 - [flathub](./ansible/roles/flathub/)
@@ -56,6 +58,7 @@ The below software and configurations are included:
 - [Misc Tasks](./ansible/roles/misc/)
 - [nodejs](./ansible/roles/nodejs/)
 - [Podman](./ansible/roles/podman/)
+- [thermald](./ansible/roles/thermald/)
 - [SELinux](./ansible/roles/selinux/)
 - [Updates](./ansible/roles/update/)
 - [Users](./ansible/roles/user/)
@@ -101,7 +104,7 @@ same tools, I do.
 You will need a Fedora Workstation installation with installed Ansible. I don't
 do any partitioning or network configuration in the playbook, so this is up to
 you. Nevertheless, for me it works best, when using a simple Fedora Workstation
-setup with btrfs. One may say... default. :heart:
+setup with btrfs. One may say ... "default". :heart:
 
 ### Install
 
@@ -134,8 +137,8 @@ $ sudo dnf install ansible-core -y
 #### Playbook
 
 Afterwards, you can download the desired release from the
-[release page](https://github.com/whiletruedoio/container-template/tags) and
-store it in a location, that suits you.
+[release page](https://github.com/dschier-wtd/fedora-workstation/tags) and
+store it in a location, that suits your needs.
 
 ```shell
 # Download a tag/release
@@ -143,8 +146,8 @@ $ https://github.com/dschier-wtd/fedora-workstation/archive/refs/tags/<tag_name>
 
 ```
 
-If you want to use git instead, help to develop or change to a tag/branch on
-the fly, you can clone the repository instead.
+If you want to use git, help to develop or change to a tag/branch on the fly,
+you can clone the repository instead.
 
 ```shell
 # Clone the repository with a given tag
@@ -179,11 +182,12 @@ playbook run, you can:
    [defaults/main.yml](./ansible/roles/gnome_applications/defaults/main.yml)
    of the role
 2. Pick the variable, you want to change and edit the
-   [playbook workstation.yml](./ansible/workstation.yml) like the below example
+   [playbook configure.yml](./ansible/playbooks/configure.yml) like shown in the
+   below example
 
 ```yaml
 ---
-# ansible playbook for github.com/dschier-wtd/fedora-workstation
+# ansible/playbooks/configure.yml
 
 - name: "Configure Fedora Workstation"
   hosts: "localhost"
@@ -195,7 +199,7 @@ playbook run, you can:
     misc_timezone: "Europe/Berlin"
     gnome_app_gaming_package_state: "present"
 
-...SNIP...
+...snip...
 ```
 
 Since it is planned to move all roles in a proper collection, there is not much
@@ -209,7 +213,7 @@ services.
 
 ```shell
 # Execute the playbook
-$ ansible-playbook -K ansible/workstation.yml
+$ ansible-playbook -K ansible/playbooks/configure.yml
 ```
 
 It is a good idea to restart your machine afterwards to ensure that everything

@@ -1,5 +1,5 @@
 ---
-# ansible playbook for github.com/dschier-wtd/fedora-workstation
+# ansible/playbooks/update.yml
 
 - name: "Configure Fedora Workstation"
   hosts: "localhost"
