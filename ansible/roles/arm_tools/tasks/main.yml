@@ -1,0 +1,22 @@
+---
+# roles/arm_tools/tasks/main.yml
+
+- name: "Manage arm_tools Packages"
+  ansible.builtin.package:
+    name: "{{ arm_tools_package_names }}"
+    state: "{{ arm_tools_package_state }}"
+  become: true
+  tags:
+    - "arm_tools"
+    - "package"
+
+- name: "Manage arm_tools Flatpaks"
+  community.general.flatpak:
+    name: "{{ arm_tools_flatpak_names }}"
+    state: "{{ arm_tools_flatpak_state }}"
+  become: true
+  tags:
+    - "arm_tools"
+    - "package"
+    - "flatpak"
+...

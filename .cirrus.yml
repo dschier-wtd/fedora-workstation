@@ -25,19 +25,22 @@ lint_ansible_task:
   name: "Lint Ansible"
   container:
     image: "quay.io/ansible/creator-ee:latest"
+  install_script: "ansible-galaxy
+                  collection install
+                  -r ansible/requirements.yml"
   lint_script: "ansible-lint ansible/"
 
 test_ansible_task:
   name: "Check Ansible"
   container:
     image: "quay.io/ansible/creator-ee:latest"
-  dependencies_script: "ansible-galaxy
-                        collection install
-                        -r ansible/requirements.yml"
-  workstation_script: "ansible-playbook
+  install_script: "ansible-galaxy
+                  collection install
+                  -r ansible/requirements.yml"
+  test_configure_script: "ansible-playbook
+                          --syntax-check
+                          ansible/playbooks/configure.yml"
+  test_update_script: "ansible-playbook
                       --syntax-check
-                      ansible/workstation.yml"
-  update_script: "ansible-playbook
-                  --syntax-check
-                  ansible/workstation.yml"
+                      ansible/playbooks/update.yml"
 ...

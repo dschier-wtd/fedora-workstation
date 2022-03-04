@@ -1,0 +1,12 @@
+---
+# roles/distrobox/tasks/main.yml
+
+- name: "Manage distrobox Packages"
+  ansible.builtin.package:
+    name: "{{ distrobox_package_names }}"
+    state: "{{ distrobox_package_state }}"
+  become: true
+  tags:
+    - "distrobox"
+    - "package"
+...

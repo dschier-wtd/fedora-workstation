@@ -1,0 +1,11 @@
+---
+# roles/arm_tools/defaults/main.yml
+
+arm_tools_package_names:
+  - "arm-image-installer"
+arm_tools_package_state: "present"
+
+arm_tools_flatpak_names:
+  - "org.raspberrypi.rpi-imager"
+arm_tools_flatpak_state: "present"
+...

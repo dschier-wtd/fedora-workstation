@@ -1,9 +1,6 @@
 ---
 # tasks/main.yml for misc
 
-- name: "Import cpu Tasks"
-  ansible.builtin.import_tasks: "cpu.yml"
-
 - name: "Import hostname Tasks"
   ansible.builtin.import_tasks: "hostname.yml"
 

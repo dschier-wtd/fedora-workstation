@@ -6,11 +6,15 @@
 
 ### software
 
-- [ ] add podman-tui
-- [ ] add distrobox
+- [y] add distrobox
 - [x] add cirrus-cli
+- [x] add arm tools for raspberry pi and other soc
+- [x] add system update playbook
+- [x] add fortune
+- [x] add github client / cli
+- [x] add thermald role
+- [ ] add podman-tui
 - [ ] add checksums for binary downloads
-- [ ] add system update playbook
 - [ ] add way to sort and order application icons
 - [ ] add snapper + auto snapshot
 - [ ] replace firefox with flatpak or alternative browser
@@ -24,10 +28,7 @@
 - [ ] add tmux on login shell
 - [ ] add vimrc
 - [ ] add vim-airline
-- [x] add fortune
-- [x] add github client / cli
 - [ ] add vscode extensions installation
-- [ ] add thermald role
 
 ### Customization
 
