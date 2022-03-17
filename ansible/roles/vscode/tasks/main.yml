@@ -34,4 +34,15 @@
   tags:
     - "vscode"
     - "package"
+
+## Extension Management
+
+- name: "Manage vscode Extensions"
+  ansible.builtin.command:
+    cmd: "code --install-extension {{ item }}"
+  loop: "{{ vscode_extension_names }}"
+  changed_when: false
+  tags:
+    - "vscode"
+    - "extension"
 ...

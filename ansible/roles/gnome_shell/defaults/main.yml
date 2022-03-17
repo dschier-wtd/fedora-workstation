@@ -5,6 +5,7 @@
 
 gnome_shell_dependency_package_names:
   - "psutils"
+  - "python-psutil"
   - "fedora-workstation-backgrounds"
 gnome_shell_dependency_package_state: "present"
 

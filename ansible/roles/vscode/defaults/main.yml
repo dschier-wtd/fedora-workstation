@@ -9,4 +9,14 @@ vscode_repository_key: "https://packages.microsoft.com/keys/microsoft.asc"
 
 vscode_package_names: "code"
 vscode_package_state: "present"
+
+## Extensions Management
+
+vscode_extension_names:
+  - "DavidAnson.vscode-markdownlint"
+  - "hediet.vscode-drawio"
+  - "ms-kubernetes-tools.vscode-kubernetes-tools"
+  - "olifink.fedora-gnome-light-dark"
+  - "redhat.ansible"
+vscode_extension_state: "present"
 ...

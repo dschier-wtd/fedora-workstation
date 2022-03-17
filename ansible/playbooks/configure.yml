@@ -68,6 +68,10 @@
       ansible.builtin.import_role:
         name: "gnome_shell"
 
+    - name: "Import logitech Role"
+      ansible.builtin.import_role:
+        name: "logitech"
+
     - name: "Import cirrus_cli Role"
       ansible.builtin.import_role:
         name: "cirrus_cli"
