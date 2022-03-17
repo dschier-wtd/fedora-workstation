@@ -13,6 +13,18 @@
 - [x] add fortune
 - [x] add github client / cli
 - [x] add thermald role
+- [x] add vscode extensions installation
+- [x] add ratbagd and piper for logitech devices
+- [x] remove hamster app
+- [x] add options for:
+  - [x] https://flathub.org/apps/details/com.github.bleakgrey.tootle
+  - [x] https://flathub.org/apps/details/im.riot.Riot
+  - [x] https://flathub.org/apps/details/sh.cider.Cider
+- [x] remove background logo extension
+- [x] python-psutil missing for dependencies of gnome-shell (either requirements.txt or dep package)
+- [x] drop github desktop by default
+- [x] add dconf editor
+- [x] gtk-v4l/v4l for webcams
 - [ ] add podman-tui
 - [ ] add checksums for binary downloads
 - [ ] add way to sort and order application icons
@@ -24,15 +36,21 @@
   - dock from dash
   - night theme switcher
   - sound input / output switcher
-- [ ] add tmux dotfiles / config
-- [ ] add tmux on login shell
-- [ ] add vimrc
-- [ ] add vim-airline
-- [ ] add vscode extensions installation
+- [x] add vim-airline
+- [ ] add options for telegram
+- [ ] add options for ms teams
+- [ ] add langpacks on demand
 
 ### Customization
 
+- [ ] configure world gnome-clock
+- [>] adjust gnome-terminal size and theme
 - [ ] integrate dotfiles repository
+- [ ] add aliases
+- [ ] adjust language and formats
+- [ ] add tmux dotfiles / config
+- [ ] add tmux on login shell
+- [ ] add vimrc
 
 ### Installation
 

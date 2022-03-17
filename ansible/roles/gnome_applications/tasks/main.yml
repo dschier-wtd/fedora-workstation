@@ -11,54 +11,10 @@
   tags:
     - "gnome"
     - "removal"
-    - "package"
-
-- name: "Manage gnome cloud Packages"
-  community.general.flatpak:
-    name: "{{ gnome_app_cloud_package_names }}"
-    state: "{{ gnome_app_cloud_package_state }}"
-  become: true
-  tags:
-    - "gnome"
-    - "cloud"
-    - "package"
     - "flatpak"
 
-- name: "Manage gnome development Packages"
-  community.general.flatpak:
-    name: "{{ gnome_app_development_package_names }}"
-    state: "{{ gnome_app_development_package_state }}"
-  become: true
-  tags:
-    - "gnome"
-    - "development"
-    - "package"
-    - "flatpak"
-
-- name: "Manage gnome gaming Packages"
-  community.general.flatpak:
-    name: "{{ gnome_app_gaming_package_names }}"
-    state: "{{ gnome_app_gaming_package_state }}"
-  become: true
-  tags:
-    - "gnome"
-    - "gaming"
-    - "package"
-    - "flatpak"
-
-- name: "Manage gnome grahic Packages"
-  community.general.flatpak:
-    name: "{{ gnome_app_graphic_package_names }}"
-    state: "{{ gnome_app_graphic_package_state }}"
-  become: true
-  tags:
-    - "gnome"
-    - "graphic"
-    - "package"
-    - "flatpak"
-
-- name: "Manage gnome media Packages"
-  community.general.flatpak:
+- name: "Manage media Packages"
+  ansible.builtin.package:
     name: "{{ gnome_app_media_package_names }}"
     state: "{{ gnome_app_media_package_state }}"
   become: true
@@ -66,60 +22,96 @@
     - "gnome"
     - "media"
     - "package"
+
+## Flatpak Management
+
+- name: "Manage gnome cloud flatpaks"
+  community.general.flatpak:
+    name: "{{ gnome_app_cloud_flatpak_names }}"
+    state: "{{ gnome_app_cloud_flatpak_state }}"
+  tags:
+    - "gnome"
+    - "cloud"
     - "flatpak"
 
-- name: "Manage gnome messaging Packages"
+- name: "Manage gnome development flatpaks"
   community.general.flatpak:
-    name: "{{ gnome_app_messaging_package_names }}"
-    state: "{{ gnome_app_messaging_package_state }}"
-  become: true
+    name: "{{ gnome_app_development_flatpak_names }}"
+    state: "{{ gnome_app_development_flatpak_state }}"
+  tags:
+    - "gnome"
+    - "development"
+    - "flatpak"
+
+- name: "Manage gnome gaming flatpaks"
+  community.general.flatpak:
+    name: "{{ gnome_app_gaming_flatpak_names }}"
+    state: "{{ gnome_app_gaming_flatpak_state }}"
+  tags:
+    - "gnome"
+    - "gaming"
+    - "flatpak"
+
+- name: "Manage gnome grahic flatpaks"
+  community.general.flatpak:
+    name: "{{ gnome_app_graphic_flatpak_names }}"
+    state: "{{ gnome_app_graphic_flatpak_state }}"
+  tags:
+    - "gnome"
+    - "graphic"
+    - "flatpak"
+
+- name: "Manage gnome media flatpaks"
+  community.general.flatpak:
+    name: "{{ gnome_app_media_flatpak_names }}"
+    state: "{{ gnome_app_media_flatpak_state }}"
+  tags:
+    - "gnome"
+    - "media"
+    - "flatpak"
+
+- name: "Manage gnome messaging flatpaks"
+  community.general.flatpak:
+    name: "{{ gnome_app_messaging_flatpak_names }}"
+    state: "{{ gnome_app_messaging_flatpak_state }}"
   tags:
     - "gnome"
     - "messaging"
-    - "package"
     - "flatpak"
 
-- name: "Manage gnome productivity Packages"
+- name: "Manage gnome productivity flatpaks"
   community.general.flatpak:
-    name: "{{ gnome_app_productivity_package_names }}"
-    state: "{{ gnome_app_productivity_package_state }}"
-  become: true
+    name: "{{ gnome_app_productivity_flatpak_names }}"
+    state: "{{ gnome_app_productivity_flatpak_state }}"
   tags:
     - "gnome"
     - "production"
-    - "package"
     - "flatpak"
 
-- name: "Manage gnome secret Packages"
+- name: "Manage gnome secret flatpaks"
   community.general.flatpak:
-    name: "{{ gnome_app_secret_package_names }}"
-    state: "{{ gnome_app_secret_package_state }}"
-  become: true
+    name: "{{ gnome_app_secret_flatpak_names }}"
+    state: "{{ gnome_app_secret_flatpak_state }}"
   tags:
     - "gnome"
     - "secret"
-    - "package"
     - "flatpak"
 
-- name: "Manage gnome system Packages"
+- name: "Manage gnome system flatpaks"
   community.general.flatpak:
-    name: "{{ gnome_app_system_package_names }}"
-    state: "{{ gnome_app_system_package_state }}"
-  become: true
+    name: "{{ gnome_app_system_flatpak_names }}"
+    state: "{{ gnome_app_system_flatpak_state }}"
   tags:
     - "gnome"
     - "secret"
-    - "package"
     - "flatpak"
 
-- name: "Manage gnome utility Packages"
+- name: "Manage gnome utility flatpaks"
   community.general.flatpak:
-    name: "{{ gnome_app_utility_package_names }}"
-    state: "{{ gnome_app_utility_package_state }}"
-  become: true
+    name: "{{ gnome_app_utility_flatpak_names }}"
+    state: "{{ gnome_app_utility_flatpak_state }}"
   tags:
     - "gnome"
     - "utility"
-    - "package"
     - "flatpak"
 ...

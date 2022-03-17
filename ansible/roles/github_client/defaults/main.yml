@@ -11,7 +11,7 @@ github_cli_dependency_package_state: "present"
 ## GitHub Desktop
 
 github_desktop_package_names: "io.github.shiftey.Desktop"
-github_desktop_package_state: "present"
+github_desktop_package_state: "absent"
 
 ## GitHub CLI
 
