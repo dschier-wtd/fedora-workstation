@@ -17,11 +17,12 @@
 - [x] add ratbagd and piper for logitech devices
 - [x] remove hamster app
 - [x] add options for:
-  - [x] https://flathub.org/apps/details/com.github.bleakgrey.tootle
-  - [x] https://flathub.org/apps/details/im.riot.Riot
-  - [x] https://flathub.org/apps/details/sh.cider.Cider
+  - [x] <https://flathub.org/apps/details/com.github.bleakgrey.tootle>
+  - [x] <https://flathub.org/apps/details/im.riot.Riot>
+  - [x] <https://flathub.org/apps/details/sh.cider.Cider>
 - [x] remove background logo extension
-- [x] python-psutil missing for dependencies of gnome-shell (either requirements.txt or dep package)
+- [x] python-psutil missing for dependencies of gnome-shell
+      (either requirements.txt or dep package)
 - [x] drop github desktop by default
 - [x] add dconf editor
 - [x] gtk-v4l/v4l for webcams
