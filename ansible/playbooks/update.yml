@@ -10,4 +10,7 @@
     - name: "Import update Tasks"
       ansible.builtin.import_role:
         name: "update"
+      tags:
+        - "update"
+        - "package"
 ...

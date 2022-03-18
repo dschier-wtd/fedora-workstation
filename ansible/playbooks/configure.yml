@@ -64,6 +64,10 @@
       ansible.builtin.import_role:
         name: "gnome_applications"
 
+    - name: "Import firefox Role"
+      ansible.builtin.import_role:
+        name: "firefox"
+
     - name: "Import gnome_shell Role"
       ansible.builtin.import_role:
         name: "gnome_shell"

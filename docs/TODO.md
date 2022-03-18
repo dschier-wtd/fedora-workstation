@@ -25,18 +25,18 @@
 - [x] drop github desktop by default
 - [x] add dconf editor
 - [x] gtk-v4l/v4l for webcams
+- [x] replace firefox with flatpak or alternative browser
+- [x] add vim-airline
 - [ ] add podman-tui
 - [ ] add checksums for binary downloads
 - [ ] add way to sort and order application icons
 - [ ] add snapper + auto snapshot
-- [ ] replace firefox with flatpak or alternative browser
 - [ ] add helm to kubernetes_client
 - [ ] add gnome shell extensions
   - blur my shell
   - dock from dash
   - night theme switcher
   - sound input / output switcher
-- [x] add vim-airline
 - [ ] add options for telegram
 - [ ] add options for ms teams
 - [ ] add langpacks on demand
@@ -66,6 +66,9 @@
 ## Issues
 
 - [ ] kubernetes_client: fix bash completion generation always done
+- [ ] fix vscode extension install always done
+- [ ] update role behaving weird
+- [ ] add retries for failed tasks like download of binaries
 
 ## Testing
 

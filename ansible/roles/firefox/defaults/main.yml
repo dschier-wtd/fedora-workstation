@@ -1,0 +1,9 @@
+---
+# roles/firefox/defaults/main.yml
+
+firefox_flatpak_names: "org.mozilla.firefox"
+firefox_flatpak_state: "present"
+
+firefox_package_names: "firefox"
+firefox_package_state: "absent"
+...

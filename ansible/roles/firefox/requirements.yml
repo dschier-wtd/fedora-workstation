@@ -1,0 +1,6 @@
+---
+# roles/firefox/requirements.yml
+
+collections:
+  - name: "community.general"
+...

@@ -32,6 +32,7 @@ This file is the changelog of [fedora-workstation](https://github.com/dschier-wt
 - Added: github cli and github desktop
 - Updated: workstation playbook to use cirrus_cli and github_client
 - Added: tests for ansible-playbooks
+- Added: firefox role
 
 ## [MAJOR.MINOR.PATCH-LABEL] - YYYYMMDD
 

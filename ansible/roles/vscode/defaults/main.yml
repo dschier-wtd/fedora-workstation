@@ -14,9 +14,11 @@ vscode_package_state: "present"
 
 vscode_extension_names:
   - "DavidAnson.vscode-markdownlint"
+  - "EditorConfig.EditorConfig"
   - "hediet.vscode-drawio"
   - "ms-kubernetes-tools.vscode-kubernetes-tools"
   - "olifink.fedora-gnome-light-dark"
   - "redhat.ansible"
+  - "antfu.slidev"
 vscode_extension_state: "present"
 ...
