@@ -107,21 +107,9 @@ This section describes how to install and get the playbook going.
 #### Ansible
 
 Before starting to use the playbook, you need to ensure that Ansible is
-installed in a recent version. To do, you can use PyPi (`pip`) as described
-below.
+installed in a recent version.
 
-```shell
-# Create a new python virtual environment (venv)
-$ python3 -m venv ~/.venv-ansible
-
-# Jump into the new environment
-$ source ~/.venv-ansible/bin/activate
-
-# Install Ansible
-$ pip install ansible psutil selinux
-```
-
-Since Fedora 35, you can also install Ansible 2.12.
+Since Fedora 35, you can install Ansible 2.12.
 
 ```shell
 # Install ansible via dnf
@@ -166,38 +154,24 @@ $ ansible-galaxy role install -r ansible/requirements.yml
 
 #### Tuning variables
 
-You can find lots of default variables in the roles and used codes. Most of
-the behaviour can be tuned by adjusting these variables in the playbook.
-
-For example, to adjust the GNOME applications that are installed during the
-playbook run, you can:
-
-1. look up the variables in the
-   [defaults/main.yml](./ansible/roles/gnome_applications/defaults/main.yml)
-   of the role
-2. Pick the variable, you want to change and edit the
-   [playbook configure.yml](./ansible/playbooks/configure.yml) like shown in the
-   below example
+You can find a [manifest.yml](./ansible/manifest.yml) in the repository. There
+you will find multiple options to configure your desired setup. For now, this
+is quite minimal, but you can also check out the `defaults/main.yml` of each
+role and change the variables via the `manifest.yml`.
 
 ```yaml
 ---
-# ansible/playbooks/configure.yml
+# ansible/manifest.yml
 
-- name: "Configure Fedora Workstation"
-  hosts: "localhost"
-  connection: "local"
+# System Settings
 
-  vars:
+system:
+  hostname: "greentea.local"
+  timezone: "Europe/Berlin"
 
-    misc_hostname: "greentea.local"
-    misc_timezone: "Europe/Berlin"
-    gnome_app_gaming_package_state: "present"
-
-...snip...
+# Enable/Disable Feature Management and Settings
+...SNIP...
 ```
-
-Since it is planned to move all roles in a proper collection, there is not much
-documentation for the roles, for now.
 
 #### The first run
 
