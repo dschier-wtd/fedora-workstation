@@ -29,10 +29,8 @@
 - [x] replace firefox with flatpak or alternative browser
 - [x] add vim-airline
 - [x] add options for telegram
-- [ ] add podman-tui
 - [ ] add checksums for binary downloads
-- [ ] add way to sort and order application icons
-- [ ] add snapper + auto snapshot
+- [ ] add auto-detection of latest releases for binary installs
 - [ ] add helm to kubernetes_client
 - [ ] add gnome shell extensions
   - blur my shell
@@ -46,14 +44,12 @@
 
 ### Customization
 
-- [ ] configure world gnome-clock
-- [>] adjust gnome-terminal size and theme
 - [ ] integrate dotfiles repository
 - [ ] add aliases
 - [ ] adjust language and formats
 - [ ] add tmux dotfiles / config
 - [ ] add tmux on login shell
-- [ ] add vimrc
+- [ ] add way to sort and order application icons
 
 ### Installation
 
@@ -75,13 +71,19 @@
 
 ## Testing
 
-- [ ] Integration tests for the roles
 - [ ] Integration tests for the playbook
-- [ ] argument specs
+- [x] linting
+- [x] syntax check
 
 ## Documentation
 
 - [ ] variables and options
 - [ ] developer docs
-- [ ] screenshots
+- [x] screenshots
 - [ ] usage examples
+
+### Later
+
+- [ ] add podman-tui (Fedora 36)
+- [ ] add snapper + auto snapshot
+- [>] adjust gnome-terminal size and theme

@@ -30,7 +30,7 @@
 
     - name: "Import bash Role"
       ansible.builtin.import_role:
-        name: "bash"
+        name: "whiletruedoio.general.bash"
       when:
         - "features.bash.managed | bool | default (false)"
 
