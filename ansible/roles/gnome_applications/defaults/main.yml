@@ -85,7 +85,7 @@ gnome_app_gaming_flatpak_names:
   - "org.gnome.Tali"
   - "org.gnome.Taquin"
   - "org.gnome.Tetravex"
-gnome_app_gaming_flatpak_state: "absent"
+gnome_app_gaming_flatpak_state: "ignore"
 
 gnome_app_graphic_flatpak_names:
   - "com.github.huluti.Curtail"
@@ -94,7 +94,6 @@ gnome_app_graphic_flatpak_names:
   - "org.darktable.Darktable"
   - "org.gimp.GIMP"
   - "org.gnome.eog"
-  - "org.gnome.Shotwell"
 gnome_app_graphic_flatpak_state: "present"
 
 gnome_app_media_flatpak_names:

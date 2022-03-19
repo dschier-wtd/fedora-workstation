@@ -47,6 +47,8 @@
   community.general.flatpak:
     name: "{{ gnome_app_gaming_flatpak_names }}"
     state: "{{ gnome_app_gaming_flatpak_state }}"
+  when:
+    - "gnome_app_gaming_flatpak_state != 'ignore'"
   tags:
     - "gnome"
     - "gaming"

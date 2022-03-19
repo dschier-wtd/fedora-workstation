@@ -40,6 +40,8 @@
   - night theme switcher
   - sound input / output switcher
 - [ ] add options for ms teams
+- [ ] move "not-gnome" software out of gnome_applications role
+- [ ] add ignore switches to flatpak/package states if useful
 - [ ] add langpacks on demand
 
 ### Customization
