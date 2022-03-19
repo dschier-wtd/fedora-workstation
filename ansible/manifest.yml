@@ -1,6 +1,61 @@
 ---
 # ansible/manifest.yml
 
-misc_hostname: "greentea.local"
-misc_timezone: "Europe/Berlin"
+# System Settings
+
+system:
+  hostname: "greentea.local"
+  timezone: "Europe/Berlin"
+
+# Enable/Disable Feature Management and Settings
+
+features:
+  ansible:
+    managed: true
+  arm_tools:
+    managed: true
+  bash:
+    managed: true
+  cirrus_cli:
+    managed: true
+  distrobox:
+    managed: true
+  dnf:
+    managed: true
+  fedora:
+    managed: true
+  flathub:
+    managed: true
+  firefox:
+    managed: true
+  firewalld:
+    managed: true
+  git:
+    managed: true
+  github_client:
+    managed: true
+  gnome_applications:
+    managed: true
+  gnome_shell:
+    managed: true
+  kubernetes_client:
+    managed: true
+  logitech:
+    managed: true
+  misc:
+    managed: true
+  nodejs:
+    managed: true
+  podman:
+    managed: true
+  selinux:
+    managed: true
+  slack:
+    managed: false
+  telegram:
+    managed: true
+  thermald:
+    managed: true
+  vscode:
+    managed: true
 ...

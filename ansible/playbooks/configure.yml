@@ -11,99 +11,152 @@
 
   tasks:
 
-    - name: "Import ansible Role"
-      ansible.builtin.import_role:
-        name: "ansible"
-
     - name: "Import misc Role"
       ansible.builtin.import_role:
         name: "misc"
-
-    - name: "Import bash Role"
-      ansible.builtin.import_role:
-        name: "bash"
-
-    - name: "Import dnf Role"
-      ansible.builtin.import_role:
-        name: "dnf"
-
-    - name: "Import fedora Role"
-      ansible.builtin.import_role:
-        name: "fedora"
-
-    - name: "Import selinux Role"
-      ansible.builtin.import_role:
-        name: "selinux"
-
-    - name: "Import firewalld Role"
-      ansible.builtin.import_role:
-        name: "firewalld"
-
-    - name: "Import thermald Role"
-      ansible.builtin.import_role:
-        name: "thermald"
+      vars:
+        misc_hostname: "{{ system.hostname }}"
+        misc_timezone: "{{ system.timezone }}"
 
     - name: "Import user Role"
       ansible.builtin.import_role:
         name: "user"
 
+    - name: "Import ansible Role"
+      ansible.builtin.import_role:
+        name: "ansible"
+      when:
+        - "features.ansible.managed | bool | default (false)"
+
+    - name: "Import bash Role"
+      ansible.builtin.import_role:
+        name: "bash"
+      when:
+        - "features.bash.managed | bool | default (false)"
+
+    - name: "Import dnf Role"
+      ansible.builtin.import_role:
+        name: "dnf"
+      when:
+        - "features.dnf.managed | bool | default (false)"
+
+    - name: "Import fedora Role"
+      ansible.builtin.import_role:
+        name: "fedora"
+      when:
+        - "features.fedora.managed | bool | default (false)"
+
+    - name: "Import selinux Role"
+      ansible.builtin.import_role:
+        name: "selinux"
+      when:
+        - "features.selinux.managed | bool | default (false)"
+
+    - name: "Import firewalld Role"
+      ansible.builtin.import_role:
+        name: "firewalld"
+      when:
+        - "features.firewalld.managed | bool | default (false)"
+
+    - name: "Import thermald Role"
+      ansible.builtin.import_role:
+        name: "thermald"
+      when:
+        - "features.thermald.managed | bool | default (false)"
+
     - name: "Import flathub Role"
       ansible.builtin.import_role:
         name: "flathub"
+      when:
+        - "features.flathub.managed | bool | default (false)"
 
     - name: "Import git Role"
       ansible.builtin.import_role:
         name: "git"
+      when:
+        - "features.git.managed | bool | default (false)"
 
     - name: "Import github_client Role"
       ansible.builtin.import_role:
         name: "github_client"
+      when:
+        - "features.github_client.managed | bool | default (false)"
 
     - name: "Import gnome_applications Role"
       ansible.builtin.import_role:
         name: "gnome_applications"
+      when:
+        - "features.gnome_applications.managed | bool | default (false)"
 
     - name: "Import firefox Role"
       ansible.builtin.import_role:
         name: "firefox"
+      when:
+        - "features.firefox.managed | bool | default (false)"
 
     - name: "Import telegram Role"
       ansible.builtin.import_role:
         name: "telegram"
+      when:
+        - "features.telegram.managed | bool | default (false)"
+
+    - name: "Import slack Role"
+      ansible.builtin.import_role:
+        name: "slack"
+      when:
+        - "features.slack.managed | bool | default (false)"
 
     - name: "Import gnome_shell Role"
       ansible.builtin.import_role:
         name: "gnome_shell"
+      when:
+        - "features.gnome_shell.managed | bool | default (false)"
 
     - name: "Import logitech Role"
       ansible.builtin.import_role:
         name: "logitech"
+      when:
+        - "features.logitech.managed | bool | default (false)"
 
     - name: "Import cirrus_cli Role"
       ansible.builtin.import_role:
         name: "cirrus_cli"
+      when:
+        - "features.cirrus_cli.managed | bool | default (false)"
 
     - name: "Import kubernetes_client Role"
       ansible.builtin.import_role:
         name: "kubernetes_client"
+      when:
+        - "features.kubernetes_client.managed | bool | default (false)"
 
     - name: "Import nodejs Role"
       ansible.builtin.import_role:
         name: "nodejs"
+      when:
+        - "features.nodejs.managed | bool | default (false)"
 
     - name: "Import podman Role"
       ansible.builtin.import_role:
         name: "podman"
+      when:
+        - "features.podman.managed | bool | default (false)"
 
     - name: "Import distrobox Role"
       ansible.builtin.import_role:
         name: "distrobox"
+      when:
+        - "features.distrobox.managed | bool | default (false)"
 
     - name: "Import arm_tools Role"
       ansible.builtin.import_role:
         name: "arm_tools"
+      when:
+        - "features.arm_tools.managed | bool | default (false)"
 
     - name: "Import vscode Role"
       ansible.builtin.import_role:
         name: "vscode"
+      when:
+        - "features.vscode.managed | bool | default (false)"
 ...

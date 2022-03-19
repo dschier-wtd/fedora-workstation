@@ -13,6 +13,12 @@ reference: https://commonmark.org/
 
 Ansible setup of my workstation.
 
+## Work in progress
+
+The repository is under heavy development and there is certainly stuff missing or
+incomplete. Be warned, you may run into unexpected issues. I am trying to
+maintain a simple [ToDo list](./docs/TODO.md).
+
 ## Motivation
 
 I am using Fedora for my workstation. I am have some customizations applied and
@@ -25,29 +31,26 @@ The playbook will install and configure various software. Most of the automation
 can be configured very easily and should be self-explanatory. Nevertheless,
 the following section will provide a feature overview.
 
-### Work in progress
+### Screenshots
 
-The playbook is under heavy development and there is certainly stuff missing or
-incomplete. Be warned, you may run into unexpected issues. I am trying to
-maintain a simple ToDo list.
+Just some impressions.
+
+![Screenshot Fedora](./assets/screenshot_fedora.png)
 
 ### Features
 
-The Ansible playbook is meant to be used via
-[ansible-pull](https://docs.ansible.com/ansible/latest/cli/ansible-pull.html).
-This also indicates, that reboots will not be triggered automatically. Most of
-these settings, configurations and installations can be toggled or changed with
-some parameters.
-
-The below software and configurations are included:
+The below software and configurations are included. Be aware, that the
+automation removes hundreds of system packages and replaces them with Flatpaks
+from [Flathub](https://flathub.org).
 
 - [Ansible](./ansible/roles/ansible/)
 - [ARM tools](./ansible/roles/arm_tools/)
 - [Bash](./ansible/roles/bash/)
 - [Cirrus CLI](./ansible/roles/cirrus_cli/)
-- [dnf](./ansible/roles/dnf/)
 - [distrobox](./ansible/roles/distrobox/)
+- [dnf](./ansible/roles/dnf/)
 - [fedora specifics](./ansible/roles/fedora/)
+- [firefox](./ansible/roles/firefox/)
 - [firewalld](./ansible/roles/firewalld/)
 - [flathub](./ansible/roles/flathub/)
 - [git](./ansible/roles/git/)
@@ -55,43 +58,34 @@ The below software and configurations are included:
 - [GNOME applications](./ansible/roles/gnome_applications/)
 - [GNOME Shell](./ansible/roles/gnome_shell/)
 - [Kubernetes Clients](./ansible/roles/kubernetes_client/)
+- [logitech](./ansible/roles/logitech/)
 - [Misc Tasks](./ansible/roles/misc/)
 - [nodejs](./ansible/roles/nodejs/)
 - [Podman](./ansible/roles/podman/)
-- [thermald](./ansible/roles/thermald/)
 - [SELinux](./ansible/roles/selinux/)
-- [Updates](./ansible/roles/update/)
+- [Slack](./ansible/roles/slack/)
+- [Telegram](./ansible/roles/telegram/)
+- [thermald](./ansible/roles/thermald/)
+- [Update](./ansible/roles/update/)
 - [Users](./ansible/roles/user/)
 - [VSCode](./ansible/roles/vscode/)
 
-In addition, there are some configurations and package removals for unwanted
-software. I try to use flatpak packages as much as possible to avoid a system
-with hundreds of packages installed. Furthermore, the packages on flathub are
-often more up-to-date, can be updated without affecting the system and can be
-removed/reset with a single command.
-
-<!--
-Lastly, the playbook is pulling in the configurations from my
-[.dotfiles](https://github.com/dschier-wtd/.dotfiles) repository and configure
-the system accordingly.
--->
-
 ### Support
 
-There is basically no support except my own setup. I am using the current
-release of [Fedora Workstation](https://getfedora.org/en/workstation/) on a
-[Dell XPS 13 9310](https://en.wikipedia.org/wiki/Dell_XPS) notebook. The
-combination provides an excellent package of usability, power efficiency and is
-very mobile.
+The repository is meant for my own set of hardware and the hardware is mostly
+working out of the box, without additional drivers or tooling. Therefore, it
+may work for your setup, too. Nevetherless, there is no guarentee, though.
 
-For my home desktop, I also rely on a
-[Logitech MX Master](https://www.logitech.com/en-us/mx/master-series.html) mouse
-and a [CODE Keyboard](https://codekeyboards.com/). Both are attached to a
-[Dell USB-C Monitor](https://www.dell.com/en-us/work/lp/usb-c-monitor), which
-is also functioning as the docking station/charger for this setup.
+My setup consists of:
 
-Please don't expect me to implement NVidia Support or other weird hardware, that
-only works with lots of tuning.
+- [Fedora Workstation](https://getfedora.org/en/workstation/)
+- [Dell XPS 13 9310](https://en.wikipedia.org/wiki/Dell_XPS)
+- [Logitech MX Master](https://www.logitech.com/en-us/mx/master-series.html)
+- [CODE Keyboard](https://codekeyboards.com/)
+- [Dell USB-C Monitor](https://www.dell.com/en-us/work/lp/usb-c-monitor)
+
+This combination has decent battery life, works like a charm with hotplugging
+and I am getting firmware updates via GNOME software.
 
 ## Usage
 
