@@ -1,0 +1,11 @@
+---
+# roles/telegram/tasks/main.yml
+
+- name: "Manage telegram Flatpaks"
+  community.general.flatpak:
+    name: "{{ telegram_flatpak_names }}"
+    state: "{{ telegram_flatpak_state }}"
+  tags:
+    - "telegram"
+    - "flatpak"
+...

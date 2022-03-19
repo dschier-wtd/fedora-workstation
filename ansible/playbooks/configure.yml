@@ -5,10 +5,9 @@
   hosts: "localhost"
   connection: "local"
 
-  vars:
+  vars_files:
 
-    misc_hostname: "greentea.local"
-    misc_timezone: "Europe/Berlin"
+    - "../manifest.yml"
 
   tasks:
 
@@ -67,6 +66,10 @@
     - name: "Import firefox Role"
       ansible.builtin.import_role:
         name: "firefox"
+
+    - name: "Import telegram Role"
+      ansible.builtin.import_role:
+        name: "telegram"
 
     - name: "Import gnome_shell Role"
       ansible.builtin.import_role:

@@ -5,6 +5,10 @@
   hosts: "localhost"
   connection: "local"
 
+  vars_files:
+
+    - "../manifest.yml"
+
   tasks:
 
     - name: "Import update Tasks"

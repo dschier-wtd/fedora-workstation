@@ -1,0 +1,6 @@
+---
+# ansible/manifest.yml
+
+misc_hostname: "greentea.local"
+misc_timezone: "Europe/Berlin"
+...

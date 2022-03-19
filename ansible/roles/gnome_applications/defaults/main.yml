@@ -110,8 +110,6 @@ gnome_app_media_flatpak_state: "present"
 
 gnome_app_messaging_flatpak_names:
   - "com.github.bleakgrey.tootle"
-  - "com.slack.Slack"
-  - "im.riot.Riot"
   - "org.gnome.Contacts"
   - "org.gnome.Fractal"
   - "org.gnome.Geary"

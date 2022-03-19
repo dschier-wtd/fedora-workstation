@@ -20,5 +20,6 @@ vscode_extension_names:
   - "olifink.fedora-gnome-light-dark"
   - "redhat.ansible"
   - "antfu.slidev"
+  - "PKief.material-icon-theme"
 vscode_extension_state: "present"
 ...

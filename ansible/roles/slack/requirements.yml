@@ -1,0 +1,6 @@
+---
+# roles/slack/requirements.yml
+
+collections:
+  - name: "community.general"
+...

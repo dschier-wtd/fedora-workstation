@@ -6,7 +6,7 @@
 
 ### software
 
-- [y] add distrobox
+- [x] add distrobox
 - [x] add cirrus-cli
 - [x] add arm tools for raspberry pi and other soc
 - [x] add system update playbook
@@ -28,6 +28,7 @@
 - [x] gtk-v4l/v4l for webcams
 - [x] replace firefox with flatpak or alternative browser
 - [x] add vim-airline
+- [x] add options for telegram
 - [ ] add podman-tui
 - [ ] add checksums for binary downloads
 - [ ] add way to sort and order application icons
@@ -38,7 +39,6 @@
   - dock from dash
   - night theme switcher
   - sound input / output switcher
-- [ ] add options for telegram
 - [ ] add options for ms teams
 - [ ] add langpacks on demand
 
@@ -55,9 +55,9 @@
 
 ### Installation
 
+- [x] add manifest file for easy, explicit adjustments (vars file)
 - [ ] add ansible-pull setup
 - [ ] provide kickstart file for initial setup
-- [ ] add manifest file for easy, explicit adjustments (vars file)
 - [ ] add install script
 
 ## Migrations
