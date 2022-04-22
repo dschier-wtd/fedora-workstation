@@ -1,0 +1,9 @@
+---
+# defaults/main.yml for golang
+
+## Package Management
+
+golang_package_names:
+  - "golang"
+golang_package_state: "present"
+...

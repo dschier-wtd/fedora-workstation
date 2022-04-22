@@ -55,6 +55,7 @@ from [Flathub](https://flathub.org).
 - [flathub](./ansible/roles/flathub/)
 - [git](./ansible/roles/git/)
 - [GitHub Clients](./ansible/roles/github_client/)
+- [golang](./ansible/roles/golang/)
 - [GNOME applications](./ansible/roles/gnome_applications/)
 - [GNOME Shell](./ansible/roles/gnome_shell/)
 - [Kubernetes Clients](./ansible/roles/kubernetes_client/)

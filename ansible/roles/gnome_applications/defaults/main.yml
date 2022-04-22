@@ -124,6 +124,7 @@ gnome_app_productivity_flatpak_names:
   - "org.gnome.Calculator"
   - "org.gnome.Solanum"
   - "org.gnome.Evince"
+  - "com.lakoliu.Furtherance"
 gnome_app_productivity_flatpak_state: "present"
 
 gnome_app_secret_flatpak_names:

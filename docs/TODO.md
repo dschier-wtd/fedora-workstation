@@ -29,6 +29,7 @@
 - [x] replace firefox with flatpak or alternative browser
 - [x] add vim-airline
 - [x] add options for telegram
+- [ ] add pandoc and pandoc-pdf role
 - [ ] add checksums for binary downloads
 - [ ] add auto-detection of latest releases for binary installs
 - [ ] add helm to kubernetes_client

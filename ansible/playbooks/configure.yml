@@ -76,6 +76,12 @@
       when:
         - "features.git.managed | bool | default (false)"
 
+    - name: "Import golang Role"
+      ansible.builtin.import_role:
+        name: "golang"
+      when:
+        - "features.golang.managed | bool | default (false)"
+
     - name: "Import github_client Role"
       ansible.builtin.import_role:
         name: "github_client"
