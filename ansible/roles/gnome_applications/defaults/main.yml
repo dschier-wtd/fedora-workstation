@@ -147,7 +147,6 @@ gnome_app_system_flatpak_state: "present"
 gnome_app_utility_flatpak_names:
   - "com.rafaelmardojai.Blanket"
   - "dev.Cogitri.Health"
-  - "org.gnome.Books"
   - "org.gnome.Characters"
   - "org.gnome.clocks"
   - "org.gnome.FileRoller"
