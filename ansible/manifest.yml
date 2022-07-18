@@ -35,7 +35,7 @@ features:
   golang:
     managed: true
   github_client:
-    managed: true
+    managed: false
   gnome_applications:
     managed: true
   gnome_shell:

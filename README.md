@@ -110,11 +110,11 @@ This section describes how to install and get the playbook going.
 Before starting to use the playbook, you need to ensure that Ansible is
 installed in a recent version.
 
-Since Fedora 35, you can install Ansible 2.12.
+Since Fedora 36, you can install Ansible Core 2.12/Ansible 5.
 
 ```shell
 # Install ansible via dnf
-$ sudo dnf install ansible-core -y
+$ sudo dnf install ansible -y
 ```
 
 #### Playbook
@@ -181,6 +181,9 @@ quite some time, remove packages, download packages and configure a couple of
 services.
 
 ```shell
+# Check run and show diffs
+$ ansible-playbook --check --diff -K ansible/playbooks/configure.yml
+
 # Execute the playbook
 $ ansible-playbook -K ansible/playbooks/configure.yml
 ```

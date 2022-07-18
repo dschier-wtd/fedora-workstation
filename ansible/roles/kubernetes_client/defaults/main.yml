@@ -14,14 +14,14 @@ kubernetes_binary_location: "/usr/local/bin"
 
 ## k9s
 
-kubernetes_k9s_version: "v0.25.18"
+kubernetes_k9s_version: "v0.26.0"
 kubernetes_k9s_state: "present"
 # yamllint disable-line rule:line-length
 kubernetes_k9s_url: "https://github.com/derailed/k9s/releases/download/{{ kubernetes_k9s_version }}/k9s_Linux_arm64.tar.gz"
 
 ## kubectl
 
-kubernetes_kubectl_version: "v1.23.6"
+kubernetes_kubectl_version: "v1.24.3"
 kubernetes_kubectl_state: "present"
 # yamllint disable-line rule:line-length
 kubernetes_kubectl_url: "https://dl.k8s.io/release/{{ kubernetes_kubectl_version }}/bin/linux/amd64/kubectl"

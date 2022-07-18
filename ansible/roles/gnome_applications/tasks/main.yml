@@ -23,6 +23,16 @@
     - "media"
     - "package"
 
+- name: "Manage system Packages"
+  ansible.builtin.package:
+    name: "{{ gnome_app_system_package_names }}"
+    state: "{{ gnome_app_system_package_state }}"
+  become: true
+  tags:
+    - "gnome"
+    - "system"
+    - "package"
+
 ## Flatpak Management
 
 - name: "Manage gnome cloud flatpaks"
