@@ -26,6 +26,8 @@ gnome_app_unwanted_package_names:
   - "gnome-photos"
   - "gnome-remote-desktop"
   - "gnome-screenshot"
+  - "gnome-terminal"
+  - "gnome-terminal-nautilus"
   - "gnome-weather"
   - "libreoffice-core"
   - "libreoffice-data"
@@ -40,6 +42,11 @@ gnome_app_unwanted_package_state: "absent"
 gnome_app_media_package_names:
   - "gtk-v4l"
 gnome_app_media_package_state: "present"
+
+gnome_app_system_package_names:
+  - "tilix"
+  - "tilix-nautilus"
+gnome_app_system_package_state: "present"
 
 ## Flatpak Management
 
