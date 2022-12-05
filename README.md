@@ -13,63 +13,51 @@ reference: https://commonmark.org/
 
 Ansible setup of my workstation.
 
-## Work in progress
-
-The repository is under heavy development and there is certainly stuff missing or
-incomplete. Be warned, you may run into unexpected issues. I am trying to
-maintain a simple [ToDo list](./docs/TODO.md).
-
 ## Motivation
 
-I am using Fedora for my workstation. I am have some customizations applied and
-software installed, that I rely on. To ensure that everything works after a
-re-installation and document my setup, I wanted to provide some more code.
+I am using Fedora Silverblue for my workstation. I have some customizations
+applied and software installed, that I rely on. To ensure that everything works
+after a re-installation and to document my setup, I want to use Ansible.
 
 ## Description
 
-The playbook will install and configure various software. Most of the automation
-can be configured very easily and should be self-explanatory. Nevertheless,
-the following section will provide a feature overview.
+The Ansible playbook will install and configure various software. Most of the
+automation can be configured very easily and should be self-explanatory.
+Nevertheless, the following section will provide a feature overview.
+
+I also wrote an article in my
+[blog](https://blog.while-true-do.io/fedora-my-workstation-setup) about this
+setup.
 
 ### Screenshots
 
 Just some impressions.
 
-![Screenshot Fedora](./assets/screenshot_fedora.png)
+![Screenshot Fedora](./docs/assets/screenshot_fedora.png)
 
 ### Features
 
-The below software and configurations are included. Be aware, that the
-automation removes hundreds of system packages and replaces them with Flatpaks
-from [Flathub](https://flathub.org).
+The below software and configurations are examples for the included software. I
+am heavily relying on Flatpaks from [Flathub](https://flathub.org) and some
+binary downloads.
 
-- [Ansible](./ansible/roles/ansible/)
-- [ARM tools](./ansible/roles/arm_tools/)
-- [Bash](./ansible/roles/bash/)
-- [Cirrus CLI](./ansible/roles/cirrus_cli/)
-- [distrobox](./ansible/roles/distrobox/)
-- [dnf](./ansible/roles/dnf/)
-- [fedora specifics](./ansible/roles/fedora/)
-- [firefox](./ansible/roles/firefox/)
-- [firewalld](./ansible/roles/firewalld/)
-- [flathub](./ansible/roles/flathub/)
-- [git](./ansible/roles/git/)
-- [GitHub Clients](./ansible/roles/github_client/)
-- [golang](./ansible/roles/golang/)
-- [GNOME applications](./ansible/roles/gnome_applications/)
-- [GNOME Shell](./ansible/roles/gnome_shell/)
-- [Kubernetes Clients](./ansible/roles/kubernetes_client/)
-- [logitech](./ansible/roles/logitech/)
-- [Misc Tasks](./ansible/roles/misc/)
-- [nodejs](./ansible/roles/nodejs/)
-- [Podman](./ansible/roles/podman/)
-- [SELinux](./ansible/roles/selinux/)
-- [Slack](./ansible/roles/slack/)
-- [Telegram](./ansible/roles/telegram/)
-- [thermald](./ansible/roles/thermald/)
-- [Update](./ansible/roles/update/)
-- [Users](./ansible/roles/user/)
-- [VSCode](./ansible/roles/vscode/)
+- Firefox
+- GNOME Calendar
+- GNOME Clocks
+- Geary
+- Endeavor (formerly GNOME ToDo)
+- Totem video player
+- GIMP
+- kubectl
+- kubectx
+- kubens
+- Skaffold
+- cirrus-cli
+- ngrok
+- micro
+- VSCode
+
+And many more.
 
 ### Support
 
@@ -80,7 +68,7 @@ may work for your setup, too. Nevetherless, there is no guarentee, though.
 My setup consists of:
 
 - [Fedora Workstation](https://getfedora.org/en/workstation/)
-- [Dell XPS 13 9310](https://en.wikipedia.org/wiki/Dell_XPS)
+- [Dell XPS 13 9315](https://en.wikipedia.org/wiki/Dell_XPS)
 - [Logitech MX Master](https://www.logitech.com/en-us/mx/master-series.html)
 - [CODE Keyboard](https://codekeyboards.com/)
 - [Dell USB-C Monitor](https://www.dell.com/en-us/work/lp/usb-c-monitor)
@@ -113,8 +101,8 @@ installed in a recent version.
 Since Fedora 36, you can install Ansible Core 2.12/Ansible 5.
 
 ```shell
-# Install ansible via dnf
-$ sudo dnf install ansible -y
+# Install ansible via rpm-ostree
+$ sudo rpm-ostree install ansible
 ```
 
 #### Playbook
@@ -153,26 +141,16 @@ $ ansible-galaxy collection install -r ansible/requirements.yml
 $ ansible-galaxy role install -r ansible/requirements.yml
 ```
 
+This will also install the upstream collection
+[whiletruedoio.desktop](https://github.com/whiletruedoio/whiletruedoio.desktop)
+which is maintained by me, too.
+
 #### Tuning variables
 
 You can find a [manifest.yml](./ansible/manifest.yml) in the repository. There
 you will find multiple options to configure your desired setup. For now, this
 is quite minimal, but you can also check out the `defaults/main.yml` of each
 role and change the variables via the `manifest.yml`.
-
-```yaml
----
-# ansible/manifest.yml
-
-# System Settings
-
-system:
-  hostname: "greentea.local"
-  timezone: "Europe/Berlin"
-
-# Enable/Disable Feature Management and Settings
-...SNIP...
-```
 
 #### The first run
 

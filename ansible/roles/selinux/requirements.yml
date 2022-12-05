@@ -1,6 +1,0 @@
----
-# requirements.yml for selinux
-
-collections:
-  - name: "ansible.posix"
-...

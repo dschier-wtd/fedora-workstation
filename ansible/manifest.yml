@@ -1,63 +1,62 @@
 ---
 # ansible/manifest.yml
 
-# System Settings
-
-system:
-  hostname: "greentea.local"
-  timezone: "Europe/Berlin"
-
-# Enable/Disable Feature Management and Settings
-
-features:
-  ansible:
-    managed: true
-  arm_tools:
-    managed: true
-  bash:
-    managed: true
-  cirrus_cli:
-    managed: true
-  distrobox:
-    managed: true
-  dnf:
-    managed: true
-  fedora:
-    managed: true
-  flathub:
-    managed: true
-  firefox:
-    managed: true
-  firewalld:
-    managed: true
-  git:
-    managed: true
-  golang:
-    managed: true
-  github_client:
-    managed: false
-  gnome_applications:
-    managed: true
-  gnome_shell:
-    managed: true
-  kubernetes_client:
-    managed: true
-  logitech:
-    managed: true
-  misc:
-    managed: true
-  nodejs:
-    managed: true
-  podman:
-    managed: true
-  selinux:
-    managed: true
-  slack:
-    managed: false
-  telegram:
-    managed: true
-  thermald:
-    managed: true
-  vscode:
-    managed: true
+flatpak_apps_present:
+  - "ca.desrt.dconf-editor"
+  - "com.belmoussaoui.Authenticator"
+  - "com.belmoussaoui.Decoder"
+  - "com.github.liferooter.textpieces"
+  - "com.github.maoschanz.drawing"
+  - "com.github.tchx84.Flatseal"
+  - "com.github.wwmm.easyeffects"
+  - "com.gitlab.newsflash"
+  - "com.jgraph.drawio.desktop"
+  - "com.mattjakeman.ExtensionManager"
+  - "com.mojang.Minecraft"
+  - "com.obsproject.Studio"
+  - "com.shatteredpixel.shatteredpixeldungeon"
+  - "com.valvesoftware.Steam"
+  - "de.haeckerfelix.Fragments"
+  - "de.haeckerfelix.Shortwave"
+  - "im.riot.Riot"
+  - "io.bassi.Amberol"
+  - "io.github.diegoivanme.flowtime"
+  - "io.github.limads.Queries"
+  - "io.github.mpobaschnig.Vaults"
+  - "io.podman_desktop.PodmanDesktop"
+  - "io.posidon.Paper"
+  - "me.dusansimic.DynamicWallpaper"
+  - "net.bartkessels.getit"
+  - "net.minetest.Minetest"
+  - "net.veloren.veloren"
+  - "org.cockpit_project.CockpitClient"
+  - "org.gimp.GIMP"
+  - "org.gnome.Boxes"
+  - "org.gnome.Calculator"
+  - "org.gnome.Calendar"
+  - "org.gnome.Cheese"
+  - "org.gnome.Contacts"
+  - "org.gnome.DejaDup"
+  - "org.gnome.Evince"
+  - "org.gnome.Geary"
+  - "org.gnome.Maps"
+  - "org.gnome.Podcasts"
+  - "org.gnome.Polari"
+  - "org.gnome.SoundRecorder"
+  - "org.gnome.TextEditor"
+  - "org.gnome.Todo"
+  - "org.gnome.Totem"
+  - "org.gnome.Weather"
+  - "org.gnome.World.Secrets"
+  - "org.gnome.clocks"
+  - "org.gnome.design.Lorem"
+  - "org.gnome.eog"
+  - "org.gnome.gitg"
+  - "org.gnome.gitlab.somas.Apostrophe"
+  - "org.gustavoperedo.FontDownloader"
+  - "org.inkscape.Inkscape"
+  - "org.mozilla.firefox"
+  - "org.telegram.desktop"
+  - "re.sonny.Commit"
+  - "re.sonny.Playhouse"
 ...

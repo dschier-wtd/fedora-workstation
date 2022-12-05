@@ -1,6 +1,0 @@
----
-# requirements.yml for misc
-
-collections:
-  - name: "community.general"
-...

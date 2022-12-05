@@ -1,6 +1,0 @@
----
-# roles/telegram/defaults/main.yml
-
-telegram_flatpak_names: "org.telegram.desktop"
-telegram_flatpak_state: "present"
-...

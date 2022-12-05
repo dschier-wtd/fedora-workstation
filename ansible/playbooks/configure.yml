@@ -11,158 +11,59 @@
 
   tasks:
 
-    - name: "Import misc Role"
+    - name: "Include micro Role"
       ansible.builtin.import_role:
-        name: "misc"
-      vars:
-        misc_hostname: "{{ system.hostname }}"
-        misc_timezone: "{{ system.timezone }}"
+        name: "whiletruedoio.desktop.micro"
 
-    - name: "Import user Role"
+    - name: "Include fedora_repos Role"
       ansible.builtin.import_role:
-        name: "user"
+        name: "whiletruedoio.desktop.fedora_repos"
 
-    - name: "Import ansible Role"
+    - name: "Include flathub_repos Role"
       ansible.builtin.import_role:
-        name: "ansible"
-      when:
-        - "features.ansible.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.flathub_repos"
 
-    - name: "Import bash Role"
+    - name: "Include firefox Role"
       ansible.builtin.import_role:
-        name: "whiletruedoio.general.bash"
-      when:
-        - "features.bash.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.firefox"
 
-    - name: "Import dnf Role"
+    - name: "Include visualstudiocode Role"
       ansible.builtin.import_role:
-        name: "dnf"
-      when:
-        - "features.dnf.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.visualstudiocode"
 
-    - name: "Import fedora Role"
+    - name: "Include kubectl Role"
       ansible.builtin.import_role:
-        name: "fedora"
-      when:
-        - "features.fedora.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.kubectl"
 
-    - name: "Import selinux Role"
+    - name: "Include kubectx Role"
       ansible.builtin.import_role:
-        name: "selinux"
-      when:
-        - "features.selinux.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.kubectx"
 
-    - name: "Import firewalld Role"
+    - name: "Include kubens Role"
       ansible.builtin.import_role:
-        name: "firewalld"
-      when:
-        - "features.firewalld.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.kubens"
 
-    - name: "Import thermald Role"
+    - name: "Include cirrus_cli Role"
       ansible.builtin.import_role:
-        name: "thermald"
-      when:
-        - "features.thermald.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.cirrus_cli"
 
-    - name: "Import flathub Role"
+    - name: "Include minikube Role"
       ansible.builtin.import_role:
-        name: "flathub"
-      when:
-        - "features.flathub.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.minikube"
 
-    - name: "Import git Role"
+    - name: "Include skaffold Role"
       ansible.builtin.import_role:
-        name: "git"
-      when:
-        - "features.git.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.skaffold"
 
-    - name: "Import golang Role"
+    - name: "Include ngrok Role"
       ansible.builtin.import_role:
-        name: "golang"
-      when:
-        - "features.golang.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.ngrok"
 
-    - name: "Import github_client Role"
+    - name: "Include gnome_config Role"
       ansible.builtin.import_role:
-        name: "github_client"
-      when:
-        - "features.github_client.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.gnome_config"
 
-    - name: "Import gnome_applications Role"
+    - name: "Include flatpak_apps Role"
       ansible.builtin.import_role:
-        name: "gnome_applications"
-      when:
-        - "features.gnome_applications.managed | bool | default (false)"
-
-    - name: "Import firefox Role"
-      ansible.builtin.import_role:
-        name: "firefox"
-      when:
-        - "features.firefox.managed | bool | default (false)"
-
-    - name: "Import telegram Role"
-      ansible.builtin.import_role:
-        name: "telegram"
-      when:
-        - "features.telegram.managed | bool | default (false)"
-
-    - name: "Import slack Role"
-      ansible.builtin.import_role:
-        name: "slack"
-      when:
-        - "features.slack.managed | bool | default (false)"
-
-    - name: "Import gnome_shell Role"
-      ansible.builtin.import_role:
-        name: "gnome_shell"
-      when:
-        - "features.gnome_shell.managed | bool | default (false)"
-
-    - name: "Import logitech Role"
-      ansible.builtin.import_role:
-        name: "logitech"
-      when:
-        - "features.logitech.managed | bool | default (false)"
-
-    - name: "Import cirrus_cli Role"
-      ansible.builtin.import_role:
-        name: "cirrus_cli"
-      when:
-        - "features.cirrus_cli.managed | bool | default (false)"
-
-    - name: "Import kubernetes_client Role"
-      ansible.builtin.import_role:
-        name: "kubernetes_client"
-      when:
-        - "features.kubernetes_client.managed | bool | default (false)"
-
-    - name: "Import nodejs Role"
-      ansible.builtin.import_role:
-        name: "nodejs"
-      when:
-        - "features.nodejs.managed | bool | default (false)"
-
-    - name: "Import podman Role"
-      ansible.builtin.import_role:
-        name: "podman"
-      when:
-        - "features.podman.managed | bool | default (false)"
-
-    - name: "Import distrobox Role"
-      ansible.builtin.import_role:
-        name: "distrobox"
-      when:
-        - "features.distrobox.managed | bool | default (false)"
-
-    - name: "Import arm_tools Role"
-      ansible.builtin.import_role:
-        name: "arm_tools"
-      when:
-        - "features.arm_tools.managed | bool | default (false)"
-
-    - name: "Import vscode Role"
-      ansible.builtin.import_role:
-        name: "vscode"
-      when:
-        - "features.vscode.managed | bool | default (false)"
+        name: "whiletruedoio.desktop.flatpak_apps"
 ...

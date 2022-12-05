@@ -1,9 +1,0 @@
----
-# defaults/main.yml for git
-
-## Package Management
-
-git_package_names:
-  - "git"
-git_package_state: "present"
-...

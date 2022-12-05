@@ -20,27 +20,4 @@ lint_yaml_task:
     image: "docker.io/library/alpine:latest"
   install_script: "apk add --no-cache yamllint"
   lint_script: "yamllint ."
-
-lint_ansible_task:
-  name: "Lint Ansible"
-  container:
-    image: "quay.io/ansible/creator-ee:latest"
-  install_script: "ansible-galaxy
-                  collection install
-                  -r ansible/requirements.yml"
-  lint_script: "ansible-lint ansible/"
-
-test_ansible_task:
-  name: "Check Ansible"
-  container:
-    image: "quay.io/ansible/creator-ee:latest"
-  install_script: "ansible-galaxy
-                  collection install
-                  -r ansible/requirements.yml"
-  test_configure_script: "ansible-playbook
-                          --syntax-check
-                          ansible/playbooks/configure.yml"
-  test_update_script: "ansible-playbook
-                      --syntax-check
-                      ansible/playbooks/update.yml"
 ...

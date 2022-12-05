@@ -1,7 +1,0 @@
----
-# roles/slack/defaults/main.yml
-
-slack_flatpak_names:
-  - "com.slack.Slack"
-slack_flatpak_state: "present"
-...

@@ -1,12 +1,7 @@
 ---
-# requirements.yml for github.com/dschier-wtd/fedora-workstation
+# ansible/requirements.yml
 
 collections:
-  - name: "ansible.posix"
-  - name: "community.general"
-  - name: "https://github.com/whiletruedoio/whiletruedoio.general"
+  - name: "https://github.com/whiletruedoio/whiletruedoio.desktop.git"
     type: "git"
-    version: "main"
-
-roles: []
 ...
