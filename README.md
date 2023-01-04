@@ -67,10 +67,10 @@ may work for your setup, too. Nevetherless, there is no guarentee, though.
 
 My setup consists of:
 
-- [Fedora Workstation](https://getfedora.org/en/workstation/)
+- [Fedora Silverblue](https://silverblue.fedoraproject.org/)
 - [Dell XPS 13 9315](https://en.wikipedia.org/wiki/Dell_XPS)
 - [Logitech MX Master](https://www.logitech.com/en-us/mx/master-series.html)
-- [CODE Keyboard](https://codekeyboards.com/)
+- [Custom Keyboard](https://blog.while-true-do.io/diy-my-first-custom-keyboard/)
 - [Dell USB-C Monitor](https://www.dell.com/en-us/work/lp/usb-c-monitor)
 
 This combination has decent battery life, works like a charm with hotplugging
