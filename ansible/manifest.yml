@@ -2,11 +2,10 @@
 # ansible/manifest.yml
 
 flatpak_apps_present:
-  - ca.desrt.dconf-editor
   - cc.arduino.IDE2
-  - cc.arduino.arduinoide
   - com.belmoussaoui.Authenticator
   - com.belmoussaoui.Decoder
+  - com.discordapp.Discord
   - com.emqx.MQTTX
   - com.feaneron.Boatswain
   - com.github.fabiocolacio.marker
@@ -16,31 +15,33 @@ flatpak_apps_present:
   - com.github.tchx84.Flatseal
   - com.github.unrud.VideoDownloader
   - com.github.wwmm.easyeffects
-  - com.gitlab.newsflash
   - com.jgraph.drawio.desktop
+  - com.mardojai.ForgeSparks
   - com.mattjakeman.ExtensionManager
   - com.mojang.Minecraft
   - com.obsproject.Studio
+  - com.opera.Opera
+  - com.prusa3d.PrusaSlicer
   - com.raggesilver.BlackBox
   - com.redis.RedisInsight
   - com.shatteredpixel.shatteredpixeldungeon
+  - com.ultimaker.cura
   - com.valvesoftware.Steam
+  - dev.edfloreshz.Done
   - eu.stethewwolf.gresistor
   - fr.romainvigier.zap
+  - hu.irl.cameractrls
   - im.riot.Riot
-  - info.febvre.Komikku
   - io.bassi.Amberol
   - io.github.cleomenezesjr.Escambo
   - io.github.dgsasha.Remembrance
   - io.github.diegoivanme.flowtime
   - io.github.limads.Queries
-  - io.github.mpobaschnig.Vaults
-  - io.posidon.Paper
-  - ir.imansalmani.IPlan
+  - io.github.shiftey.Desktop
+  - io.gitlab.news_flash.NewsFlash
   - it.mijorus.smile
   - me.iepure.devtoolbox
-  - net.bartkessels.getit
-  - nl.hjdskes.gcolor3
+  - me.ppvan.psequel
   - org.cockpit_project.CockpitClient
   - org.darktable.Darktable
   - org.fritzing.Fritzing
@@ -48,19 +49,19 @@ flatpak_apps_present:
   - org.gnome.Boxes
   - org.gnome.Calculator
   - org.gnome.Calendar
-  - org.gnome.Cheese
   - org.gnome.Contacts
   - org.gnome.DejaDup
   - org.gnome.Epiphany
   - org.gnome.Evince
   - org.gnome.Geary
+  - org.gnome.Loupe
   - org.gnome.Maps
   - org.gnome.Podcasts
   - org.gnome.Polari
   - org.gnome.Shotwell
+  - org.gnome.Snapshot
   - org.gnome.SoundRecorder
   - org.gnome.TextEditor
-  - org.gnome.Todo
   - org.gnome.Totem
   - org.gnome.Weather
   - org.gnome.World.Secrets
@@ -71,8 +72,10 @@ flatpak_apps_present:
   - org.gustavoperedo.FontDownloader
   - org.inkscape.Inkscape
   - org.mozilla.firefox
+  - org.nickvision.tubeconverter
   - org.telegram.desktop
   - org.tenacityaudio.Tenacity
   - re.sonny.Commit
   - re.sonny.Playhouse
+  - us.zoom.Zoom
 ...

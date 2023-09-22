@@ -31,6 +31,14 @@
       ansible.builtin.import_role:
         name: "whiletruedoio.desktop.visualstudiocode"
 
+    - name: "Include gpaste Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.desktop.gpaste"
+
+    - name: "Include hadolint Role"
+      ansible.builtin.import_role:
+        name: "whiletruedoio.desktop.hadolint"
+
     - name: "Include kubectl Role"
       ansible.builtin.import_role:
         name: "whiletruedoio.desktop.kubectl"
@@ -59,9 +67,9 @@
       ansible.builtin.import_role:
         name: "whiletruedoio.desktop.ngrok"
 
-    - name: "Include gnome_config Role"
-      ansible.builtin.import_role:
-        name: "whiletruedoio.desktop.gnome_config"
+#    - name: "Include gnome_config Role"
+#      ansible.builtin.import_role:
+#        name: "whiletruedoio.desktop.gnome_config"
 
     - name: "Include flatpak_apps Role"
       ansible.builtin.import_role:
